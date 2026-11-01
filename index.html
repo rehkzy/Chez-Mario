@@ -3,8 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chez Mario</title>
-<meta name="description" content="Chez Mario — pizzas napolitaines et panuozzi, produits frais, à emporter et en livraison via Deliveroo et Uber Eats.">
+<title>Chez Mario · Pizzeria italienne halal à Ivry-sur-Seine · Pizzas, panuozzi, piadine</title>
+<meta name="description" content="Chez Mario, pizzeria italienne halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri. Pizzas dès 7 €, panuozzi et piadine napolitains, tiramisu maison. Ouvert 7j/7 de 11h à 23h30, à emporter ou en livraison Deliveroo et Uber Eats.">
+<meta name="keywords" content="pizzeria Ivry-sur-Seine, pizza halal Ivry, restaurant italien Ivry, panuozzo, panuozzi, panozzo, panuzzo, panizza, panizzo, panuezzo, piadina, pizza à emporter 94200, livraison pizza Ivry, Deliveroo Ivry, Uber Eats Ivry, pizza napolitaine, Chez Mario">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="geo.region" content="FR-94">
+<meta name="geo.placename" content="Ivry-sur-Seine">
+<link rel="canonical" href="https://rehkzy.github.io/Chez-Mario/">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Chez Mario">
+<meta property="og:title" content="Chez Mario · Pizzeria italienne halal à Ivry-sur-Seine">
+<meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7, 11h–23h30, à emporter ou en livraison.">
+<meta property="og:url" content="https://rehkzy.github.io/Chez-Mario/">
+<meta property="og:image" content="https://rehkzy.github.io/Chez-Mario/photos/hero.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="1400">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chez Mario · Pizzeria italienne halal à Ivry-sur-Seine">
+<meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7, à emporter ou en livraison.">
+<meta name="twitter:image" content="https://rehkzy.github.io/Chez-Mario/photos/hero.jpg">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -56,8 +75,8 @@ h2{font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:-.01em}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 72px}
 .hero .logo{width:min(520px,100%);display:block}
 .hero .logo .letters{fill:#fff}
-.hero p.tag{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin:28px 0 0;color:#fff}
-.hero p.tag em{font-style:normal;color:var(--ochre)}
+.hero .tag{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin:28px 0 0;color:#fff}
+.hero .tag em{font-style:normal;color:var(--ochre)}
 .hero .sub{color:#c9c2b4;max-width:48ch;margin:18px 0 0;font-size:18px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent;transition:transform .15s ease,background .15s ease}
@@ -188,6 +207,16 @@ section{padding:84px 0}
 .order .pickup strong{color:#fff}
 @media (max-width:820px){.order .wrap{grid-template-columns:1fr}}
 
+/* ---------- faq ---------- */
+.faq{background:#fff}
+.qa{display:grid;gap:10px;margin-top:30px;max-width:820px}
+.qa details{border:1px solid var(--kraft);border-radius:14px;background:var(--paper);padding:0 20px}
+.qa summary{cursor:pointer;font-weight:700;font-size:18px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--font-display);font-size:24px;color:var(--tomato);flex:none}
+.qa details[open] summary::after{content:"–"}
+.qa p{margin:0 0 18px;color:var(--muted)}
+
 /* ---------- find ---------- */
 .find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .find address{font-style:normal;font-size:19px;line-height:1.5}
@@ -207,6 +236,61 @@ footer .tricolore{display:inline-flex;height:6px;width:60px;border-radius:3px;ov
 footer .tricolore i{flex:1}
 footer a{color:#fff}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Restaurant",
+      "@id": "https://rehkzy.github.io/Chez-Mario/#restaurant",
+      "name": "Chez Mario",
+      "alternateName": ["Chez Mario Ivry", "Pizzeria Chez Mario"],
+      "description": "Pizzeria italienne halal à Ivry-sur-Seine. Pizzas base tomate ou crème, panuozzi et piadine napolitains, tiramisu maison, sodas siciliens. Tout est préparé par Mario, à la commande. À emporter et en livraison.",
+      "url": "https://rehkzy.github.io/Chez-Mario/",
+      "image": ["https://rehkzy.github.io/Chez-Mario/photos/hero.jpg", "https://rehkzy.github.io/Chez-Mario/photos/margherita.jpg", "https://rehkzy.github.io/Chez-Mario/photos/panuozzo.jpg"],
+      "logo": "https://rehkzy.github.io/Chez-Mario/logo.svg",
+      "telephone": "",
+      "servesCuisine": ["Italienne", "Pizza", "Napolitaine", "Halal"],
+      "priceRange": "€",
+      "currenciesAccepted": "EUR",
+      "acceptsReservations": "False",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 rue Gabriel Péri",
+        "addressLocality": "Ivry-sur-Seine",
+        "postalCode": "94200",
+        "addressRegion": "Île-de-France",
+        "addressCountry": "FR"
+      },
+      "areaServed": ["Ivry-sur-Seine", "Vitry-sur-Seine", "Charenton-le-Pont", "Le Kremlin-Bicêtre", "Paris 13e"],
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "11:00",
+        "closes": "23:30"
+      }],
+      "hasMenu": "https://rehkzy.github.io/Chez-Mario/#carte",
+      "sameAs": ["https://www.instagram.com/chezmario94/"],
+      "potentialAction": [
+        {"@type": "OrderAction", "name": "Commander sur Deliveroo", "target": "https://deliveroo.fr/", "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"},
+        {"@type": "OrderAction", "name": "Commander sur Uber Eats", "target": "https://www.ubereats.com/fr", "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"}
+      ],
+      "keywords": "pizzeria Ivry, pizza halal Ivry-sur-Seine, restaurant italien Ivry, panuozzo, panozzo, panuzzo, panizza, panizzo, piadina, pizza à emporter 94200, livraison pizza Ivry"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://rehkzy.github.io/Chez-Mario/#faq",
+      "mainEntity": [
+        {"@type":"Question","name":"Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?","acceptedAnswer":{"@type":"Answer","text":"Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, près de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo, aussi écrit panozzo, panuzzo, panizza ou panizzo, est la spécialité de la maison : quatre recettes à 12,50 € ou à composer. Livraison à Ivry, Vitry-sur-Seine, Charenton-le-Pont, Le Kremlin-Bicêtre et Paris 13e."}},
+        {"@type":"Question","name":"Chez Mario est-il halal ?","acceptedAnswer":{"@type":"Answer","text":"Oui, toutes les viandes sont halal, sur les pizzas comme sur les panuozzi et piadine."}},
+        {"@type":"Question","name":"Quels sont les horaires de Chez Mario ?","acceptedAnswer":{"@type":"Answer","text":"Ouvert tous les jours de 11h à 23h30 sans interruption, à emporter et en livraison."}},
+        {"@type":"Question","name":"Comment se faire livrer Chez Mario ?","acceptedAnswer":{"@type":"Answer","text":"Via Deliveroo ou Uber Eats, à partir de 20 € de commande, ou en retrait au comptoir."}},
+        {"@type":"Question","name":"Quelle est la différence entre un panuozzo et une piadina ?","acceptedAnswer":{"@type":"Answer","text":"Le panuozzo est un pain de pâte à pizza épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario propose chaque recette dans les deux versions, au même prix."}}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -219,6 +303,7 @@ footer a{color:#fff}
       <li><a href="#essence">La maison</a></li>
       <li><a href="#carte">La carte</a></li>
       <li><a href="#adresse">Nous trouver</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
     <a class="cta" href="#commander">Commander</a>
   </div>
@@ -244,7 +329,7 @@ footer a{color:#fff}
   <div class="wrap">
     <div>
       <svg class="logo" viewBox="0 0 964 545" role="img" aria-label="Chez Mario"><use href="#logo-symbol"/></svg>
-      <p class="tag">Pizzas <em>&amp;</em> panuozzi faits par Mario,<br>à emporter ou livrés chez vous.</p>
+      <h1 class="tag">Pizzeria italienne halal à Ivry-sur-Seine : pizzas <em>&amp;</em> panuozzi faits par Mario,<br>à emporter ou livrés chez vous.</h1>
       <p class="sub">Ici, il y a vraiment un Mario. Il pétrit, il garnit, il enfourne. Pizzas à partir de 7 €, panuozzi et piadine, tiramisu maison. Produits frais, 100 % halal, commande prête en quelques minutes.</p>
       <div class="actions">
         <a class="btn btn-deliveroo" data-link="deliveroo" href="#commander">Commander sur Deliveroo</a>
@@ -329,6 +414,23 @@ footer a{color:#fff}
 
 <div class="band" aria-hidden="true"></div>
 
+<section class="faq" id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Questions fréquentes</p>
+    <h2>Ce qu'on nous demande le plus.</h2>
+    <div class="qa">
+      <details open><summary>Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?</summary><p>Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, à deux pas de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo (aussi écrit panozzo, panuzzo, panizza ou panizzo) est notre spécialité : quatre recettes à 12,50 €, ou à composer. Nous livrons aussi à Vitry-sur-Seine, Charenton-le-Pont, Le Kremlin-Bicêtre et Paris 13e.</p></details>
+      <details><summary>Chez Mario est-il halal ?</summary><p>Oui. Toutes nos viandes sont halal, sur les pizzas comme sur les panuozzi et piadine, sans exception.</p></details>
+      <details><summary>Quels sont les horaires ?</summary><p>Ouvert tous les jours, du lundi au dimanche, de 11h à 23h30 sans interruption, à emporter et en livraison.</p></details>
+      <details><summary>Comment se faire livrer ?</summary><p>Via Deliveroo ou Uber Eats, à partir de 20 € de commande. La carte y est identique à celle du restaurant. Vous pouvez aussi commander et récupérer au comptoir.</p></details>
+      <details><summary>Quelle est la différence entre un panuozzo et une piadina ?</summary><p>Le panuozzo est un pain de pâte à pizza, épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario, chaque recette existe dans les deux versions, au même prix.</p></details>
+      <details><summary>Quelle taille font les pizzas ?</summary><p>Toutes nos pizzas sont en taille Senior. Pour la version Duo, pour deux personnes, comptez 2 € de plus.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"></div>
+
 <section class="find" id="adresse">
   <div class="wrap">
     <div>
@@ -337,7 +439,8 @@ footer a{color:#fff}
       <address style="margin-top:18px">
         <strong>Chez Mario</strong><br>
         <span data-field="address1"></span><br>
-        <span data-field="address2"></span>
+        <span data-field="address2"></span><br>
+        <span style="color:var(--muted);font-size:16px">Métro Mairie d'Ivry (ligne 7), à deux pas de la mairie. Livraison à Ivry, Vitry, Charenton, Kremlin-Bicêtre et Paris 13e.</span>
       </address>
       <p style="margin:22px 0 6px;font-weight:700">Ouvert tous les jours, 11h – 23h30<br><span style="font-weight:500;color:var(--muted)">À emporter et en livraison, sans interruption.</span></p>
       <table class="hours" aria-label="Horaires d'ouverture"><tbody id="hours"></tbody></table>
@@ -411,7 +514,7 @@ const CONFIG = {
     },
     panuozzo: {
       sizeNote: "Panuozzo ou piadina, au choix",
-      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud. Quatre recettes, ou le vôtre en cinq étapes. Chaque recette existe aussi en piadina."},
+      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud. On l'écrit panuozzo, mais on nous le demande aussi en panozzo, panuzzo, panizza ou panizzo : c'est le même, et c'est ici qu'on le trouve à Ivry. Quatre recettes, ou le vôtre en cinq étapes. Chaque recette existe aussi en piadina."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
           {name:"Marizo",    price:"12,50 €", desc:"Pesto, stracciatella, parmesan, bresaola, oignons caramélisés, roquette, basilic frais.", style:"panuozzo", tags:["Signature"]},
