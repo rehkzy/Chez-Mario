@@ -9,20 +9,20 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="FR-94">
 <meta name="geo.placename" content="Ivry-sur-Seine">
-<link rel="canonical" href="https://chez-mario.vercel.app/">
+<link rel="canonical" href="https://chezmario.vercel.app/">
 <meta property="og:type" content="restaurant">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Chez Mario">
 <meta property="og:title" content="Chez Mario · Pizzeria italienne halal à Ivry-sur-Seine">
 <meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7, 11h–23h30, à emporter ou en livraison.">
-<meta property="og:url" content="https://chez-mario.vercel.app/">
-<meta property="og:image" content="https://chez-mario.vercel.app/photos/hero.jpg">
+<meta property="og:url" content="https://chezmario.vercel.app/">
+<meta property="og:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <meta property="og:image:width" content="1400">
 <meta property="og:image:height" content="1400">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chez Mario · Pizzeria italienne halal à Ivry-sur-Seine">
 <meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7, à emporter ou en livraison.">
-<meta name="twitter:image" content="https://chez-mario.vercel.app/photos/hero.jpg">
+<meta name="twitter:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -73,11 +73,15 @@ h2{font-size:clamp(34px,5vw,56px);font-weight:900;letter-spacing:-.01em}
 /* ---------- hero ---------- */
 .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:64px 0 72px}
-.hero .logo{width:min(520px,100%);display:block}
+.hero .logo{width:min(380px,80%);display:block}
 .hero .logo .letters{fill:#fff}
-.hero .tag{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:clamp(26px,3.4vw,40px);line-height:1.1;margin:28px 0 0;color:#fff}
-.hero .tag em{font-style:normal;color:var(--ochre)}
-.hero .sub{color:#c9c2b4;max-width:48ch;margin:18px 0 0;font-size:18px}
+.hero .tag{margin:26px 0 0;display:grid;gap:14px}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre)}
+.hero .kicker::before{content:"";width:28px;height:3px;background:linear-gradient(90deg,var(--basil) 0 33%,#dedede 33% 66%,var(--tomato) 66%)}
+.hero .big{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:clamp(38px,5.2vw,64px);line-height:.98;letter-spacing:-.015em;color:#fff}
+.hero .big em{font-style:normal;color:var(--ochre)}
+.hero .big .name{font-style:normal;color:var(--tomato);text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px;text-decoration-color:var(--ochre)}
+.hero .sub{color:#c9c2b4;max-width:46ch;margin:22px 0 0;font-size:18px;line-height:1.55}
 .hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent;transition:transform .15s ease,background .15s ease}
 .btn:hover{transform:translateY(-1px)}
@@ -242,13 +246,13 @@ footer a{color:#fff}
   "@graph": [
     {
       "@type": "Restaurant",
-      "@id": "https://chez-mario.vercel.app/#restaurant",
+      "@id": "https://chezmario.vercel.app/#restaurant",
       "name": "Chez Mario",
       "alternateName": ["Chez Mario Ivry", "Pizzeria Chez Mario"],
       "description": "Pizzeria italienne halal à Ivry-sur-Seine. Pizzas base tomate ou crème, panuozzi et piadine napolitains, tiramisu maison, sodas siciliens. Tout est préparé par Mario, à la commande. À emporter et en livraison.",
-      "url": "https://chez-mario.vercel.app/",
-      "image": ["https://chez-mario.vercel.app/photos/hero.jpg", "https://chez-mario.vercel.app/photos/margherita.jpg", "https://chez-mario.vercel.app/photos/panuozzo.jpg"],
-      "logo": "https://chez-mario.vercel.app/logo.svg",
+      "url": "https://chezmario.vercel.app/",
+      "image": ["https://chezmario.vercel.app/photos/hero.jpg", "https://chezmario.vercel.app/photos/margherita.jpg", "https://chezmario.vercel.app/photos/panuozzo.jpg"],
+      "logo": "https://chezmario.vercel.app/logo.svg",
       "telephone": "",
       "servesCuisine": ["Italienne", "Pizza", "Napolitaine", "Halal"],
       "priceRange": "€",
@@ -269,7 +273,7 @@ footer a{color:#fff}
         "opens": "11:00",
         "closes": "23:30"
       }],
-      "hasMenu": "https://chez-mario.vercel.app/#carte",
+      "hasMenu": "https://chezmario.vercel.app/#carte",
       "sameAs": ["https://www.instagram.com/chezmario94/"],
       "potentialAction": [
         {"@type": "OrderAction", "name": "Commander sur Deliveroo", "target": "https://deliveroo.fr/", "deliveryMethod": "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet"},
@@ -279,7 +283,7 @@ footer a{color:#fff}
     },
     {
       "@type": "FAQPage",
-      "@id": "https://chez-mario.vercel.app/#faq",
+      "@id": "https://chezmario.vercel.app/#faq",
       "mainEntity": [
         {"@type":"Question","name":"Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?","acceptedAnswer":{"@type":"Answer","text":"Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, près de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo, aussi écrit panozzo, panuzzo, panizza ou panizzo, est la spécialité de la maison : quatre recettes à 12,50 € ou à composer. Livraison à Ivry, Vitry-sur-Seine, Charenton-le-Pont, Le Kremlin-Bicêtre et Paris 13e."}},
         {"@type":"Question","name":"Chez Mario est-il halal ?","acceptedAnswer":{"@type":"Answer","text":"Oui, toutes les viandes sont halal, sur les pizzas comme sur les panuozzi et piadine."}},
@@ -329,8 +333,11 @@ footer a{color:#fff}
   <div class="wrap">
     <div>
       <svg class="logo" viewBox="0 0 964 545" role="img" aria-label="Chez Mario"><use href="#logo-symbol"/></svg>
-      <h1 class="tag">Pizzeria italienne halal à Ivry-sur-Seine : pizzas <em>&amp;</em> panuozzi faits par Mario,<br>à emporter ou livrés chez vous.</h1>
-      <p class="sub">Ici, il y a vraiment un Mario. Il pétrit, il garnit, il enfourne. Pizzas à partir de 7 €, panuozzi et piadine, tiramisu maison. Produits frais, 100 % halal, commande prête en quelques minutes.</p>
+      <h1 class="tag">
+        <span class="kicker">Pizzeria italienne · 100 % halal · Ivry-sur-Seine</span>
+        <span class="big">Pizzas <em>&amp;</em> panuozzi<br>faits par <span class="name">Mario</span>.</span>
+      </h1>
+      <p class="sub">Tout est préparé à la commande par Mario : pâte maison, produits frais, four chaud. À emporter au comptoir ou livré chez vous, 7j/7 de 11h à 23h30.</p>
       <div class="actions">
         <a class="btn btn-deliveroo" data-link="deliveroo" href="#commander">Commander sur Deliveroo</a>
         <a class="btn btn-ubereats" data-link="ubereats" href="#commander">Commander sur Uber Eats</a>

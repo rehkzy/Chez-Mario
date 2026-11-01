@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url><loc>https://chez-mario.vercel.app/</loc><lastmod>2026-11-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
-    <image:image><image:loc>https://chez-mario.vercel.app/photos/hero.jpg</image:loc><image:title>Mario, pizzaiolo de Chez Mario à Ivry-sur-Seine</image:title></image:image>
-    <image:image><image:loc>https://chez-mario.vercel.app/photos/panuozzo.jpg</image:loc><image:title>Panuozzo Chez Mario</image:title></image:image>
-    <image:image><image:loc>https://chez-mario.vercel.app/photos/margherita.jpg</image:loc><image:title>Pizza Margherita Chez Mario</image:title></image:image>
+  <url><loc>https://chezmario.vercel.app/</loc><lastmod>2026-11-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <image:image><image:loc>https://chezmario.vercel.app/photos/hero.jpg</image:loc><image:title>Mario, pizzaiolo de Chez Mario à Ivry-sur-Seine</image:title></image:image>
+    <image:image><image:loc>https://chezmario.vercel.app/photos/panuozzo.jpg</image:loc><image:title>Panuozzo Chez Mario</image:title></image:image>
+    <image:image><image:loc>https://chezmario.vercel.app/photos/margherita.jpg</image:loc><image:title>Pizza Margherita Chez Mario</image:title></image:image>
   </url>
 </urlset>
