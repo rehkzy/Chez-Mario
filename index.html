@@ -218,6 +218,10 @@ section{padding:84px 0}
   .boxes figure{flex:0 0 78%;scroll-snap-align:start}
 }
 
+.card.nophoto{align-self:start;background:#fff;border-style:dashed}
+.card.nophoto .body{padding-top:20px}
+@media (max-width:720px){.card.nophoto .body{padding:14px}}
+
 /* ---------- order ---------- */
 .order{background:var(--ink);color:#fff}
 .order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
@@ -769,8 +773,8 @@ const CONFIG = {
   // carte
   const cards=document.getElementById("cards");
   const card=m=>`
-      <article class="card">
-        <div class="photo">${m.img?`<img src="${m.img}" alt="${m.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`:`<div class="disc ${m.style}"></div><span class="label">photo à venir</span>`}</div>
+      <article class="card${m.img?"":" nophoto"}">
+        ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
         <div class="body">
           <div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div>
           <p>${m.desc}</p>
