@@ -218,9 +218,7 @@ section{padding:84px 0}
   .boxes figure{flex:0 0 78%;scroll-snap-align:start}
 }
 
-.card.nophoto{align-self:start;background:#fff;border-style:dashed}
-.card.nophoto .body{padding-top:20px}
-@media (max-width:720px){.card.nophoto .body{padding:14px}}
+.recipes.after-cards{margin-top:22px}
 
 /* ---------- order ---------- */
 .order{background:var(--ink);color:#fff}
@@ -786,7 +784,11 @@ const CONFIG = {
     const c=CONFIG.menu[cat]; let h="";
     if(c.hero){ h+=`<div class="cathero"><img src="${c.hero.img}" alt="${c.hero.title}"><div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; h+= g.layout==="list" ? `<div class="recipes">${g.items.map(m=>`<div class="recipe"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`).join("")}</div>` : `<div class="cards">${g.items.map(card).join("")}</div>`; });
+      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; const recipe=m=>`<div class="recipe"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
+      else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
+        if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
+        if(noImg.length) h+=`<div class="recipes${withImg.length?" after-cards":""}">${noImg.map(recipe).join("")}</div>`; } });
       if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=k.img?`<div class="compose with-img"><div class="inner">${inner}</div><img src="${k.img}" alt=""></div>`:`<div class="compose">${inner}</div>`; }
     }
     if(c.lists){
