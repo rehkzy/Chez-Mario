@@ -6,4 +6,4 @@ Site une page de la pizzeria Chez Mario (Ivry-sur-Seine). HTML/CSS/JS autonome, 
 - `photos/` : visuels de la carte (JPEG ≤ 1400 px).
 - `logo.svg` : logo source. Dans la page, le logo est inliné en `<symbol>` ; les lettres et la toque prennent la couleur du groupe `.letters`.
 
-Hébergement : GitHub Pages depuis la branche `main`, racine du dépôt.
+Hébergement : Vercel, déployé automatiquement depuis la branche `main` (site statique, aucun build). URL : https://chez-mario.vercel.app/
