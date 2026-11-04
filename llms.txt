@@ -1,0 +1,23 @@
+# Chez Mario
+
+> Restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri, près du métro Mairie d'Ivry (ligne 7). Pizzas napolitaines, panuozzi et piadine préparés à la commande par Mario. Toutes les viandes sont halal. À emporter, commande par téléphone, ouvert tous les jours de 11h à 23h30.
+
+## Essentiel
+- Nom : Chez Mario
+- Type : restaurant italien, pizzeria, halal
+- Adresse : 7 rue Gabriel Péri, 94200 Ivry-sur-Seine, France
+- Horaires : tous les jours, 11h – 23h30, sans interruption
+- Commande : par téléphone, retrait et paiement au comptoir (carte ou espèces). Livraison Deliveroo / Uber Eats à venir.
+- Instagram : https://www.instagram.com/chezmario94/
+- Site : https://chezmario.vercel.app/
+
+## Spécialités
+- Panuozzo (aussi écrit panozzo, panuzzo, panizza, panizzo) : pain de pâte à pizza cuit au four, ouvert et garni à chaud. 4 recettes à 12,50 € (Marizo, Vitello, Carnivoro, Palerme) ou à composer. Chaque recette existe aussi en piadina.
+- Pizzas base tomate ou crème fraîche, taille Senior, à partir de 7 € (Duo +2 €) : Margherita 7 €, 4 Fromages, Regina, Vérone, Orientale, Tonno, Calzone 7,90 €, Pizza Mario, Chèvre, Savoyarde 7,90 €, Salmone 8,90 €, Truffo 9,90 €.
+- Desserts : Pan'Utella (pâte à pizza, Nutella, pistache) 5 €, tiramisu spéculoos & caramel 3,50 €.
+- Boissons : sodas siciliens Polara (Arancia Rossa, Limonata, Mandarino Verde, Thè Pesca) 2,90 €, sodas classiques 1,80 €, eau 1 €.
+
+## Pages
+- [Carte complète](https://chezmario.vercel.app/#carte)
+- [Commander](https://chezmario.vercel.app/#commander)
+- [FAQ](https://chezmario.vercel.app/#faq)

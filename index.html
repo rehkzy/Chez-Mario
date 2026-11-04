@@ -24,6 +24,12 @@
 <meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7. Commande par téléphone, à emporter.">
 <meta name="twitter:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#141416">
+<meta property="og:image:alt" content="Mario, pizzaiolo de Chez Mario, avec sa pâte du jour">
+<meta name="geo.position" content="48.8160;2.3850">
+<meta name="ICBM" content="48.8160, 2.3850">
+<link rel="preload" as="image" href="photos/mario.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -390,6 +396,9 @@ section{padding:84px 0}
   footer .wrap{flex-direction:column;align-items:flex-start;gap:10px}
 }
 
+.about-seo{background:var(--paper);padding:28px 0;border-top:1px solid var(--kraft)}
+.about-seo p{margin:0;font-size:14px;color:var(--muted);max-width:80ch}
+
 /* ---------- footer ---------- */
 footer{background:var(--ink);color:#c9c2b4;padding:36px 0;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
@@ -399,53 +408,363 @@ footer a{color:#fff}
 </style>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Restaurant",
+   "@id": "https://chezmario.vercel.app/#restaurant",
+   "name": "Chez Mario",
+   "alternateName": [
+    "Chez Mario Ivry",
+    "Restaurant Chez Mario",
+    "Pizzeria Chez Mario Ivry-sur-Seine"
+   ],
+   "description": "Restaurant italien halal à Ivry-sur-Seine. Pizzas base tomate ou crème, panuozzi et piadine napolitains, tiramisu spéculoos, sodas siciliens. Tout est préparé par Mario, à la commande. Commande par téléphone, à emporter.",
+   "url": "https://chezmario.vercel.app/",
+   "image": [
+    "https://chezmario.vercel.app/photos/hero.jpg",
+    "https://chezmario.vercel.app/photos/margherita.jpg",
+    "https://chezmario.vercel.app/photos/panuozzo.jpg",
+    "https://chezmario.vercel.app/photos/mario.jpg",
+    "https://chezmario.vercel.app/photos/tiramisu.jpg"
+   ],
+   "logo": "https://chezmario.vercel.app/logo.svg",
+   "telephone": "+33123456789",
+   "servesCuisine": [
+    "Italienne",
+    "Halal",
+    "Pizza",
+    "Napolitaine"
+   ],
+   "priceRange": "€",
+   "currenciesAccepted": "EUR",
+   "acceptsReservations": "False",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "7 rue Gabriel Péri",
+    "addressLocality": "Ivry-sur-Seine",
+    "postalCode": "94200",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+   },
+   "openingHoursSpecification": [
     {
-      "@type": "Restaurant",
-      "@id": "https://chezmario.vercel.app/#restaurant",
-      "name": "Chez Mario",
-      "alternateName": ["Chez Mario Ivry", "Restaurant Chez Mario"],
-      "description": "Restaurant italien halal à Ivry-sur-Seine. Pizzas base tomate ou crème, panuozzi et piadine napolitains, tiramisu spéculoos, sodas siciliens. Tout est préparé par Mario, à la commande. Commande par téléphone, à emporter.",
-      "url": "https://chezmario.vercel.app/",
-      "image": ["https://chezmario.vercel.app/photos/hero.jpg", "https://chezmario.vercel.app/photos/margherita.jpg", "https://chezmario.vercel.app/photos/panuozzo.jpg"],
-      "logo": "https://chezmario.vercel.app/logo.svg",
-      "telephone": "+33123456789",
-      "servesCuisine": ["Italienne", "Halal", "Pizza", "Napolitaine"],
-      "priceRange": "€",
-      "currenciesAccepted": "EUR",
-      "acceptsReservations": "False",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "7 rue Gabriel Péri",
-        "addressLocality": "Ivry-sur-Seine",
-        "postalCode": "94200",
-        "addressRegion": "Île-de-France",
-        "addressCountry": "FR"
-      },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "11:00",
-        "closes": "23:30"
-      }],
-      "hasMenu": "https://chezmario.vercel.app/#carte",
-      "sameAs": ["https://www.instagram.com/chezmario94/"],
-      "paymentAccepted": "Carte bancaire, Espèces",
-      "keywords": "restaurant italien Ivry-sur-Seine, restaurant italien halal, pizzeria Ivry, pizza halal Ivry, panuozzo, panozzo, panuzzo, panizza, panizzo, piadina, pizza à emporter 94200, livraison pizza Ivry"
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "11:00",
+     "closes": "23:30"
+    }
+   ],
+   "hasMenu": {
+    "@id": "https://chezmario.vercel.app/#menu"
+   },
+   "sameAs": [
+    "https://www.instagram.com/chezmario94/"
+   ],
+   "paymentAccepted": "Carte bancaire, Espèces",
+   "keywords": "restaurant italien Ivry-sur-Seine, restaurant italien halal, pizzeria Ivry, pizza halal Ivry, panuozzo, panozzo, panuzzo, panizza, panizzo, piadina, pizza à emporter 94200, livraison pizza Ivry",
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.816,
+    "longitude": 2.385
+   },
+   "hasMap": "https://www.google.com/maps/search/?api=1&query=Chez+Mario+7+rue+Gabriel+P%C3%A9ri+94200+Ivry-sur-Seine",
+   "slogan": "Pizzas & panuozzi faits par Mario",
+   "founder": {
+    "@type": "Person",
+    "name": "Mario",
+    "jobTitle": "Pizzaiolo"
+   },
+   "knowsAbout": [
+    "pizza napolitaine",
+    "panuozzo",
+    "panozzo",
+    "panuzzo",
+    "panizza",
+    "panizzo",
+    "piadina",
+    "cuisine italienne halal"
+   ],
+   "publicAccess": true,
+   "isAccessibleForFree": true,
+   "smokingAllowed": false
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://chezmario.vercel.app/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, près de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo, aussi écrit panozzo, panuzzo, panizza ou panizzo, est la spécialité de la maison : quatre recettes à 12,50 € ou à composer."
+     }
     },
     {
-      "@type": "FAQPage",
-      "@id": "https://chezmario.vercel.app/#faq",
-      "mainEntity": [
-        {"@type":"Question","name":"Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?","acceptedAnswer":{"@type":"Answer","text":"Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, près de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo, aussi écrit panozzo, panuzzo, panizza ou panizzo, est la spécialité de la maison : quatre recettes à 12,50 € ou à composer."}},
-        {"@type":"Question","name":"Chez Mario est-il halal ?","acceptedAnswer":{"@type":"Answer","text":"Oui, toutes les viandes sont halal, sur les pizzas comme sur les panuozzi et piadine."}},
-        {"@type":"Question","name":"Quels sont les horaires de Chez Mario ?","acceptedAnswer":{"@type":"Answer","text":"Ouvert tous les jours de 11h à 23h30 sans interruption, à emporter."}},
-        {"@type":"Question","name":"Comment commander Chez Mario ?","acceptedAnswer":{"@type":"Answer","text":"Par téléphone : vous passez commande, Mario la prépare, et vous réglez sur place en venant la récupérer au 7 rue Gabriel Péri à Ivry-sur-Seine. Livraison Deliveroo et Uber Eats à venir."}},
-        {"@type":"Question","name":"Quelle est la différence entre un panuozzo et une piadina ?","acceptedAnswer":{"@type":"Answer","text":"Le panuozzo est un pain de pâte à pizza épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario propose chaque recette dans les deux versions, au même prix."}}
-      ]
+     "@type": "Question",
+     "name": "Chez Mario est-il halal ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, toutes les viandes sont halal, sur les pizzas comme sur les panuozzi et piadine."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quels sont les horaires de Chez Mario ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ouvert tous les jours de 11h à 23h30 sans interruption, à emporter."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Comment commander Chez Mario ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Par téléphone : vous passez commande, Mario la prépare, et vous réglez sur place en venant la récupérer au 7 rue Gabriel Péri à Ivry-sur-Seine. Livraison Deliveroo et Uber Eats à venir."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Quelle est la différence entre un panuozzo et une piadina ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Le panuozzo est un pain de pâte à pizza épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario propose chaque recette dans les deux versions, au même prix."
+     }
     }
-  ]
+   ]
+  },
+  {
+   "@type": "Menu",
+   "@id": "https://chezmario.vercel.app/#menu",
+   "name": "Carte Chez Mario",
+   "url": "https://chezmario.vercel.app/#carte",
+   "inLanguage": "fr",
+   "hasMenuSection": [
+    {
+     "@type": "MenuSection",
+     "name": "Pizzas base tomate",
+     "hasMenuItem": []
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Pizzas base crème fraîche",
+     "hasMenuItem": [
+      {
+       "@type": "MenuItem",
+       "name": "Pizza Mario",
+       "description": "Crème fraîche, mozzarella, poulet rôti, fromage à raclette, oignons confits.",
+       "offers": {
+        "@type": "Offer",
+        "price": "7.90",
+        "priceCurrency": "EUR"
+       }
+      }
+     ]
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Panuozzi et piadine",
+     "hasMenuItem": []
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Desserts",
+     "hasMenuItem": [
+      {
+       "@type": "MenuItem",
+       "name": "Pan'Utella",
+       "description": "Pâte à pizza, Nutella, pistache",
+       "offers": {
+        "@type": "Offer",
+        "price": "5",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Tiramisu",
+       "description": "Spéculoos & caramel",
+       "offers": {
+        "@type": "Offer",
+        "price": "3.50",
+        "priceCurrency": "EUR"
+       }
+      }
+     ]
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Boissons",
+     "hasMenuItem": [
+      {
+       "@type": "MenuItem",
+       "name": "Arancia Rossa",
+       "description": "Polara, 22 % de jus d'oranges sanguines de Sicile",
+       "offers": {
+        "@type": "Offer",
+        "price": "2.90",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Limonata",
+       "description": "Polara, 15 % de jus de citrons de Sicile",
+       "offers": {
+        "@type": "Offer",
+        "price": "2.90",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Mandarino Verde",
+       "description": "Polara, 15 % de jus de mandarines vertes de Sicile",
+       "offers": {
+        "@type": "Offer",
+        "price": "2.90",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Thè Pesca",
+       "description": "Polara, thé noir infusé à la pêche",
+       "offers": {
+        "@type": "Offer",
+        "price": "2.90",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Coca-Cola",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Coca-Cola Zéro",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Fanta",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Ice Tea",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Oasis Tropical",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Oasis Pomme-Cassis",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Sprite",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Tropico",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Perrier",
+       "offers": {
+        "@type": "Offer",
+        "price": "1.80",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Eau",
+       "offers": {
+        "@type": "Offer",
+        "price": "1",
+        "priceCurrency": "EUR"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://chezmario.vercel.app/#website",
+   "url": "https://chezmario.vercel.app/",
+   "name": "Chez Mario",
+   "inLanguage": "fr-FR",
+   "publisher": {
+    "@id": "https://chezmario.vercel.app/#restaurant"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://chezmario.vercel.app/",
+   "url": "https://chezmario.vercel.app/",
+   "name": "Chez Mario · Restaurant italien halal à Ivry-sur-Seine",
+   "isPartOf": {
+    "@id": "https://chezmario.vercel.app/#website"
+   },
+   "about": {
+    "@id": "https://chezmario.vercel.app/#restaurant"
+   },
+   "inLanguage": "fr-FR",
+   "dateModified": "2026-11-04"
+  }
+ ]
 }
 </script>
 </head>
@@ -666,6 +985,12 @@ footer a{color:#fff}
   </div>
 </nav>
 
+<section class="about-seo" aria-label="À propos">
+  <div class="wrap">
+    <p><strong>Chez Mario</strong> est un restaurant italien halal à Ivry-sur-Seine (94), au 7 rue Gabriel Péri, près du métro Mairie d'Ivry. Pizzas napolitaines base tomate ou crème, panuozzi (aussi écrit panozzo, panuzzo, panizza ou panizzo) et piadine, tiramisu spéculoos et sodas siciliens, préparés à la commande par Mario. À emporter, tous les jours de 11h à 23h30. Commande par téléphone.</p>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div><span class="tricolore" aria-hidden="true"><i style="background:#178457"></i><i style="background:#dedede"></i><i style="background:#c7192b"></i></span>© <span id="year"></span> Chez Mario · 7 rue Gabriel Péri, 94200 Ivry-sur-Seine · 100 % halal<br><span style="opacity:.75">Site réalisé par <a href="https://florian-b.fr" target="_blank" rel="noopener">Florian B.</a></span></div>
@@ -780,7 +1105,7 @@ const CONFIG = {
   const cards=document.getElementById("cards");
   const card=m=>`
       <article class="card${m.img?"":" nophoto"}">
-        ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
+        ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name} — pizza Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
         <div class="body">
           <div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div>
           <p>${m.desc}</p>
@@ -790,14 +1115,14 @@ const CONFIG = {
   const CAT_TITLES={pizza:"Pizzas",panuozzo:"Panuozzi & piadine",dessert:"Desserts",boisson:"Boissons"};
   function renderCat(cat){
     const c=CONFIG.menu[cat]; let h="";
-    if(c.hero){ h+=`<div class="cathero"><img src="${c.hero.img}" alt="${c.hero.title}"><div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
+    if(c.hero){ h+=`<div class="cathero"><img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async"><div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
       c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; const recipe=m=>`<div class="recipe"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
         if(noImg.length) h+=`<div class="recipes${withImg.length?" after-cards":""}">${noImg.map(recipe).join("")}</div>`; } });
-      if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=k.img?`<div class="compose with-img"><div class="inner">${inner}</div><img src="${k.img}" alt=""></div>`:`<div class="compose">${inner}</div>`; }
+      if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=k.img?`<div class="compose with-img"><div class="inner">${inner}</div><img src="${k.img}" alt="Pizza à composer — Chez Mario" loading="lazy" decoding="async"></div>`:`<div class="compose">${inner}</div>`; }
     }
     if(c.lists){
       h+=`<div class="list">${c.lists.map(l=>`<div class="col"><h3>${l.title}${l.note?`<small>${l.note}</small>`:""}</h3><table>${l.items.map(it=>`<tr><td>${it[0]}${it[1]?`<small>${it[1]}</small>`:""}</td><td>${it[2]}</td></tr>`).join("")}</table></div>`).join("")}</div>`;
