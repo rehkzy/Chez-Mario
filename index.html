@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chez Mario · Restaurant italien halal à Ivry-sur-Seine · Pizzas, panuozzi, piadine</title>
-<meta name="description" content="Chez Mario, restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri. Pizzas dès 7 €, panuozzi et piadine napolitains, tiramisu spéculoos. Ouvert 7j/7 de 11h à 23h30. Commandez par téléphone, récupérez au comptoir.">
+<meta name="description" content="Chez Mario, restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri. Pizzas dès 7 €, panuozzi et piadine napolitains, tiramisu spéculoos. Ouvert du mardi au dimanche. Commandez par téléphone, récupérez au comptoir.">
 <meta name="keywords" content="restaurant italien Ivry-sur-Seine, restaurant italien halal Ivry, pizzeria Ivry, pizza halal Ivry, panuozzo, panuozzi, panozzo, panuzzo, panizza, panizzo, panuezzo, piadina, pizza à emporter 94200, pizza napolitaine, Chez Mario">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="FR-94">
@@ -14,14 +14,14 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Chez Mario">
 <meta property="og:title" content="Chez Mario · Restaurant italien halal à Ivry-sur-Seine">
-<meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7, 11h–23h30. Commande par téléphone, à emporter.">
+<meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert du mardi au dimanche. Commande par téléphone, à emporter.">
 <meta property="og:url" content="https://chezmario.vercel.app/">
 <meta property="og:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <meta property="og:image:width" content="1400">
 <meta property="og:image:height" content="1400">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chez Mario · Restaurant italien halal à Ivry-sur-Seine">
-<meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert 7j/7. Commande par téléphone, à emporter.">
+<meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert du mardi au dimanche. Commande par téléphone, à emporter.">
 <meta name="twitter:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -448,20 +448,8 @@ footer a{color:#fff}
     "addressCountry": "FR"
    },
    "openingHoursSpecification": [
-    {
-     "@type": "OpeningHoursSpecification",
-     "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-     ],
-     "opens": "11:00",
-     "closes": "23:30"
-    }
+    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "11:00","closes": "23:30"},
+    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "18:00","closes": "23:30"}
    ],
    "hasMenu": {
     "@id": "https://chezmario.vercel.app/#menu"
@@ -522,7 +510,7 @@ footer a{color:#fff}
      "name": "Quels sont les horaires de Chez Mario ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Ouvert tous les jours de 11h à 23h30 sans interruption, à emporter."
+      "text": "Du mardi au samedi de 11h à 23h30 sans interruption, le dimanche de 18h à 23h30. Fermé le lundi. À emporter."
      }
     },
     {
@@ -809,7 +797,7 @@ footer a{color:#fff}
         <span class="kicker">Restaurant italien halal · Ivry-sur-Seine</span>
         <span class="big">Pizzas <em>&amp;</em> panuozzi<br>faits par <span class="name">Mario</span>.</span>
       </h1>
-      <p class="sub">Tout est préparé à la commande par Mario : pâte maison, produits frais, four chaud. Vous appelez, on enfourne, vous passez récupérer. 7j/7 de 11h à 23h30.</p>
+      <p class="sub">Tout est préparé à la commande par Mario : pâte maison, produits frais, four chaud. Vous appelez, on enfourne, vous passez récupérer. Du mardi au dimanche.</p>
       <div class="actions">
         <a class="btn btn-call" data-link="tel" href="#commander"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg><span>Commander au <b data-field="phone"></b></span></a>
         <a class="btn btn-ghost" href="#carte">Voir la carte</a>
@@ -824,15 +812,15 @@ footer a{color:#fff}
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>Pizza</span><i></i><span>Panuozzo</span><i></i><span>Piadina</span><i></i><span>100 % halal</span><i></i><span>Ivry-sur-Seine</span><i></i><span>7j/7 · 11h – 23h30</span><i></i><span>Fait par Mario</span><i></i>
-    <span>Pizza</span><i></i><span>Panuozzo</span><i></i><span>Piadina</span><i></i><span>100 % halal</span><i></i><span>Ivry-sur-Seine</span><i></i><span>7j/7 · 11h – 23h30</span><i></i><span>Fait par Mario</span><i></i>
+    <span>Pizza</span><i></i><span>Panuozzo</span><i></i><span>Piadina</span><i></i><span>100 % halal</span><i></i><span>Ivry-sur-Seine</span><i></i><span>Mar–Dim</span><i></i><span>Fait par Mario</span><i></i>
+    <span>Pizza</span><i></i><span>Panuozzo</span><i></i><span>Piadina</span><i></i><span>100 % halal</span><i></i><span>Ivry-sur-Seine</span><i></i><span>Mar–Dim</span><i></i><span>Fait par Mario</span><i></i>
   </div>
 </div>
 
 <div class="quick" aria-label="Infos pratiques">
   <div class="wrap">
     <a href="#adresse"><strong>7 rue Gabriel Péri</strong><span>Ivry-sur-Seine · M7 Mairie d'Ivry</span></a>
-    <div><strong id="open-now">Ouvert 7j/7</strong><span>11h – 23h30, sans interruption</span></div>
+    <div><strong id="open-now">Horaires</strong><span>Mar–Sam 11h–23h30 · Dim 18h–23h30 · Lun fermé</span></div>
     <div><strong>100 % halal</strong><span>Toutes nos viandes</span></div>
     <a href="#commander"><strong>À emporter</strong><span>Commande par téléphone, retrait au comptoir</span></a>
   </div>
@@ -909,7 +897,7 @@ footer a{color:#fff}
     <div>
       <p class="eyebrow">Commander</p>
       <h2>Vous appelez, on enfourne, vous récupérez.</h2>
-      <p class="lede">Pas d'application, pas d'intermédiaire : vous passez commande par téléphone, Mario la prépare, et vous réglez au comptoir en venant la chercher. Tous les jours de 11h à 23h30.</p>
+      <p class="lede">Pas d'application, pas d'intermédiaire : vous passez commande par téléphone, Mario la prépare, et vous réglez au comptoir en venant la chercher. Du mardi au samedi de 11h à 23h30, le dimanche de 18h à 23h30.</p>
       <ol class="steps">
         <li><i>1</i><div><strong>Appelez</strong><span>Dites-nous ce que vous voulez et l'heure à laquelle vous passez.</span></div></li>
         <li><i>2</i><div><strong>On prépare</strong><span>Tout part au four au moment convenu, pour que ce soit chaud.</span></div></li>
@@ -939,7 +927,7 @@ footer a{color:#fff}
     <div class="qa">
       <details open><summary>Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?</summary><p>Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, à deux pas de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo (aussi écrit panozzo, panuzzo, panizza ou panizzo) est notre spécialité : quatre recettes à 12,50 €, ou à composer.</p></details>
       <details><summary>Chez Mario est-il halal ?</summary><p>Oui. Toutes nos viandes sont halal, sur les pizzas comme sur les panuozzi et piadine, sans exception.</p></details>
-      <details><summary>Quels sont les horaires ?</summary><p>Ouvert tous les jours, du lundi au dimanche, de 11h à 23h30 sans interruption, à emporter.</p></details>
+      <details><summary>Quels sont les horaires ?</summary><p>Du mardi au samedi de 11h à 23h30 sans interruption, le dimanche de 18h à 23h30. Fermé le lundi. À emporter.</p></details>
       <details><summary>Comment commander ?</summary><p>Par téléphone, au <span data-field="phone"></span>. Vous indiquez votre commande et l'heure de passage, Mario la prépare, et vous réglez sur place en la récupérant au 7 rue Gabriel Péri. La livraison via Deliveroo et Uber Eats arrive prochainement.</p></details>
       <details><summary>Quelle est la différence entre un panuozzo et une piadina ?</summary><p>Le panuozzo est un pain de pâte à pizza, épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario, chaque recette existe dans les deux versions, au même prix.</p></details>
       <details><summary>Quelle taille font les pizzas ?</summary><p>Toutes nos pizzas sont en taille Senior. Pour la version Duo, pour deux personnes, comptez 2 € de plus.</p></details>
@@ -961,7 +949,7 @@ footer a{color:#fff}
         <span style="color:var(--muted);font-size:16px">Métro Mairie d'Ivry (ligne 7), à deux pas de la mairie.</span><br>
         <a data-link="tel" href="#" style="font-weight:700;color:var(--tomato)"><span data-field="phone"></span></a>
       </address>
-      <p style="margin:22px 0 6px;font-weight:700">Ouvert tous les jours, 11h – 23h30<br><span style="font-weight:500;color:var(--muted)">À emporter et en livraison, sans interruption.</span></p>
+      <p style="margin:22px 0 6px;font-weight:700">Du mardi au samedi 11h – 23h30, le dimanche 18h – 23h30<br><span style="font-weight:500;color:var(--muted)">À emporter et en livraison, sans interruption.</span></p>
       <table class="hours" aria-label="Horaires d'ouverture"><tbody id="hours"></tbody></table>
       <a class="maplink" data-link="maps" href="#" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a>
     </div>
@@ -976,7 +964,7 @@ footer a{color:#fff}
   <div class="mb-bar">
     <a class="mb-brand" href="#top" aria-label="Haut de page">
       <svg viewBox="655 8 302 198" aria-hidden="true"><path fill="#fff" fill-rule="evenodd" d="M947,98.1h0c-11.4-16.7-26.4-14.9-40-24h-.2c7.3-73.5-77.1-71-123-48.1-.2,0-26.7-9.7-32-10-30.7-1.9-64.8,7.1-82,35-28.7,46.4,13.6,64.5,25,80,8.6,11.7-4.5,28.6-6,43-.6,5.9,12,7.2,13,4,5.2-16.8,9.1-33.9,13-51,.8-3.6.7-7.3,1-11-18.1,0-26.6-29.1-24-43,7.2-38.9,66.5-46.1,83-13,37.1-41.2,132.8-29.7,100,36,41.4-11.3,73.2,31.1,33,57-19.1,12.3-37.1-6-56-6,15.5,20.7,8.6,15.7-11,45-32.8-13.1-59.4-21.9-94-27-3.2-15.9,7.5-31.6,9-48-10.8-4.3-3.4,0-22.6-.8-19.2-.8-5,4.4-3.5,4.7,3.3.5,7.6,2.2,6.1,9.2-7.8,34.6-11.6,33.9-11.6,38.3s4.3,9.8,9.7,10.2c48.8,3.5,70.6,14.7,106,24.6,3.1.9,6.3-.2,8.4-2.6l21.5-25.6c47,10.4,109.1-30,77.1-76.9h0Z"/></svg>
-      <span><strong>Chez Mario</strong><em id="mb-status">7j/7 · 11h – 23h30</em></span>
+      <span><strong>Chez Mario</strong><em id="mb-status">Mar–Dim</em></span>
     </a>
     <a class="mb-order" data-link="tel" href="#">Appeler</a>
     <a class="mb-maps" data-link="maps" href="#" target="_blank" rel="noopener" aria-label="Itinéraire">
@@ -987,7 +975,7 @@ footer a{color:#fff}
 
 <section class="about-seo" aria-label="À propos">
   <div class="wrap">
-    <p><strong>Chez Mario</strong> est un restaurant italien halal à Ivry-sur-Seine (94), au 7 rue Gabriel Péri, près du métro Mairie d'Ivry. Pizzas napolitaines base tomate ou crème, panuozzi (aussi écrit panozzo, panuzzo, panizza ou panizzo) et piadine, tiramisu spéculoos et sodas siciliens, préparés à la commande par Mario. À emporter, tous les jours de 11h à 23h30. Commande par téléphone.</p>
+    <p><strong>Chez Mario</strong> est un restaurant italien halal à Ivry-sur-Seine (94), au 7 rue Gabriel Péri, près du métro Mairie d'Ivry. Pizzas napolitaines base tomate ou crème, panuozzi (aussi écrit panozzo, panuzzo, panizza ou panizzo) et piadine, tiramisu spéculoos et sodas siciliens, préparés à la commande par Mario. À emporter, du mardi au samedi de 11h à 23h30 et le dimanche de 18h à 23h30. Commande par téléphone.</p>
   </div>
 </section>
 
@@ -1015,13 +1003,13 @@ const CONFIG = {
     instagram: "https://www.instagram.com/chezmario94/"
   },
   hours: [
-    ["Lundi", "11h – 23h30"],
+    ["Lundi", "Fermé"],
     ["Mardi", "11h – 23h30"],
     ["Mercredi", "11h – 23h30"],
     ["Jeudi", "11h – 23h30"],
     ["Vendredi", "11h – 23h30"],
     ["Samedi", "11h – 23h30"],
-    ["Dimanche", "11h – 23h30"]
+    ["Dimanche", "18h – 23h30"]
   ],
   menu: {
     pizza: {
@@ -1087,14 +1075,25 @@ const CONFIG = {
 };
 /* ====================================================================== */
 
+// horaires : [ouverture, fermeture] en minutes, null = fermé ; index 0 = lundi
+const HOURS=[null,[660,1410],[660,1410],[660,1410],[660,1410],[660,1410],[1080,1410]];
+const DAYS=["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
+function openStatus(){
+  const d=new Date(), day=(d.getDay()+6)%7, m=d.getHours()*60+d.getMinutes(), h=HOURS[day];
+  if(h&&m>=h[0]&&m<h[1]) return {open:true};
+  const fmt=x=>Math.floor(x/60)+"h"+(x%60?String(x%60).padStart(2,"0"):"");
+  if(h&&m<h[0]) return {open:false,next:"ouvre à "+fmt(h[0])};
+  for(let i=1;i<=7;i++){ const n=HOURS[(day+i)%7]; if(n) return {open:false,next:(i===1?"ouvre demain":"ouvre "+DAYS[(day+i)%7])+" à "+fmt(n[0])}; }
+  return {open:false,next:"fermé"};
+}
 (function(){
   // liens, adresse, téléphone
   document.querySelectorAll("[data-link]").forEach(a=>{ const k=a.dataset.link; if(k==="tel"){ a.href="tel:"+CONFIG.phone.replace(/\s/g,""); return; } if(CONFIG.links[k]) a.href=CONFIG.links[k]; if(k==="deliveroo"||k==="ubereats"){a.target="_blank";a.rel="noopener";} });
   document.querySelectorAll("[data-field]").forEach(el=>{ el.textContent=CONFIG[el.dataset.field]||""; });
   document.getElementById("year").textContent=new Date().getFullYear();
   (function(){
-    const st=document.getElementById("mb-status"); const d=new Date(); const m=d.getHours()*60+d.getMinutes(); const open=m>=11*60&&m<23*60+30; st.textContent=open?"Ouvert · 23h30":"Fermé · 11h"; if(open) st.classList.add("open"); })();
-  (function(){ const el=document.getElementById("open-now"); if(!el) return; const d=new Date(); const m=d.getHours()*60+d.getMinutes(); const open=m>=11*60&&m<23*60+30; el.textContent=open?"Ouvert maintenant":"Fermé · ouvre à 11h"; el.className=open?"open":"closed"; })();
+    const el=document.getElementById("mb-status"); const st=openStatus(); el.textContent=st.open?"Ouvert · 23h30":("Fermé · "+st.next); if(st.open) el.classList.add("open"); })();
+  (function(){ const el=document.getElementById("open-now"); if(!el) return; const st=openStatus(); el.textContent=st.open?"Ouvert maintenant":("Fermé · "+st.next); el.className=st.open?"open":"closed"; })();
   if(CONFIG.heroImage){const v=document.getElementById("hero-visual");document.getElementById("hero-photo").src=CONFIG.heroImage;v.classList.add("has-photo");}
 
   // horaires

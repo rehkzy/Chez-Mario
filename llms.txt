@@ -1,12 +1,12 @@
 # Chez Mario
 
-> Restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri, près du métro Mairie d'Ivry (ligne 7). Pizzas napolitaines, panuozzi et piadine préparés à la commande par Mario. Toutes les viandes sont halal. À emporter, commande par téléphone, ouvert tous les jours de 11h à 23h30.
+> Restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri, près du métro Mairie d'Ivry (ligne 7). Pizzas napolitaines, panuozzi et piadine préparés à la commande par Mario. Toutes les viandes sont halal. À emporter, commande par téléphone, ouvert du mardi au samedi de 11h à 23h30 et le dimanche de 18h à 23h30, fermé le lundi.
 
 ## Essentiel
 - Nom : Chez Mario
 - Type : restaurant italien, pizzeria, halal
 - Adresse : 7 rue Gabriel Péri, 94200 Ivry-sur-Seine, France
-- Horaires : tous les jours, 11h – 23h30, sans interruption
+- Horaires : mardi à samedi 11h – 23h30 sans interruption, dimanche 18h – 23h30, fermé le lundi
 - Téléphone : 09 72 84 74 29
 - Commande : par téléphone, retrait et paiement au comptoir (carte ou espèces). Livraison Deliveroo / Uber Eats à venir.
 - Instagram : https://www.instagram.com/chezmario94/
