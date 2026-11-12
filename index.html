@@ -452,8 +452,24 @@ footer a{color:#fff}
     "addressCountry": "FR"
    },
    "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens": "11:00","closes": "23:30"},
-    {"@type": "OpeningHoursSpecification","dayOfWeek": "Sunday","opens": "18:00","closes": "23:30"}
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+     ],
+     "opens": "11:00",
+     "closes": "23:30"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": "Sunday",
+     "opens": "18:00",
+     "closes": "23:30"
+    }
    ],
    "hasMenu": {
     "@id": "https://chezmario.vercel.app/#menu"
@@ -559,7 +575,8 @@ footer a{color:#fff}
         "@type": "Offer",
         "price": "7.90",
         "priceCurrency": "EUR"
-       }
+       },
+       "image": "https://chezmario.vercel.app/photos/pizza-mario.jpg"
       }
      ]
     },
@@ -1022,15 +1039,15 @@ const CONFIG = {
       groups: [
         {title:"Base tomate", items:[
           {img:"photos/margherita.jpg", name:"Margherita", price:"7 €",    desc:"Sauce tomate, mozzarella, origan.", style:"rossa", tags:["Végétarienne"]},
-          {name:"4 Fromages", price:"7,90 €", desc:"Sauce tomate, mozzarella, gorgonzola, chèvre, parmesan.", style:"rossa", tags:["Végétarienne"]},
+          {img:"photos/4fromages-tomate.jpg", name:"4 Fromages", price:"7,90 €", desc:"Sauce tomate, mozzarella, gorgonzola, chèvre, parmesan.", style:"rossa", tags:["Végétarienne"]},
           {img:"photos/regina.jpg", name:"Regina",     price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, champignons.", style:"rossa", tags:[]},
           {img:"photos/verone.jpg", name:"Vérone",     price:"7,90 €", desc:"Sauce tomate, mozzarella, poulet rôti, champignons.", style:"rossa", tags:[]},
           {img:"photos/orientale.jpg", name:"Orientale",  price:"7,90 €", desc:"Sauce tomate, mozzarella, merguez, poivrons, oignons.", style:"rossa", tags:["Épicée"]},
           {img:"photos/tonno.jpg", name:"Tonno",      price:"7,90 €", desc:"Sauce tomate, mozzarella, thon, œuf, olives, oignons rouges.", style:"rossa", tags:[]},
-          {name:"Calzone",    price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, œuf, champignons. Pizza pliée et dorée.", style:"rossa", tags:[]}
+          {img:"photos/calzone.jpg", name:"Calzone",    price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, œuf, champignons. Pizza pliée et dorée.", style:"rossa", tags:[]}
         ]},
         {title:"Base crème fraîche", items:[
-          {name:"Pizza Mario", price:"7,90 €", desc:"Crème fraîche, mozzarella, poulet rôti, fromage à raclette, oignons confits.", style:"bianca", tags:["Signature"]},
+          {img:"photos/pizza-mario.jpg", name:"Pizza Mario", price:"7,90 €", desc:"Crème fraîche, mozzarella, poulet rôti, fromage à raclette, oignons confits.", style:"bianca", tags:["Signature"]},
           {img:"photos/chevre.jpg", name:"Chèvre", price:"7,90 €", desc:"Crème fraîche, mozzarella, chèvre, miel, noix.", style:"bianca", tags:["Végétarienne"]},
           {img:"photos/savoyarde.jpg", name:"Savoyarde",   price:"7,90 €", desc:"Crème fraîche, mozzarella, pommes de terre, jambon, oignons rouges.", style:"bianca", tags:[]},
           {name:"4 Fromages",  price:"7,90 €", desc:"Crème fraîche, mozzarella, gorgonzola, chèvre, parmesan.", style:"bianca", tags:["Végétarienne"]},
