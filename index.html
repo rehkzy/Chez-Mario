@@ -403,6 +403,25 @@ section{padding:84px 0}
 .about-seo{background:var(--paper);padding:28px 0;border-top:1px solid var(--kraft)}
 .about-seo p{margin:0;font-size:14px;color:var(--muted);max-width:80ch}
 
+/* ---------- taille senior / duo ---------- */
+.sizebox{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 6px}
+.sz{border:2px solid var(--kraft);border-radius:16px;padding:14px 16px;display:grid;gap:2px;background:var(--paper)}
+.sz i{font-style:normal;font-weight:800;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.sz strong{font-family:var(--font-display);font-size:24px;font-weight:900}
+.sz span{font-size:13.5px;color:var(--muted)}
+.sz.duo{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sz.duo i{color:var(--ochre)}
+.sz.duo strong{color:var(--ochre)}
+.sz.duo span{color:#c9c2b4}
+@media (max-width:720px){.sizebox{grid-template-columns:1fr;gap:8px;margin-top:16px}.sz{padding:12px 14px}.sz strong{font-size:20px}}
+.dish-size{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px}
+.dish-size[hidden]{display:none}
+.dish-size button{font:inherit;border:2px solid var(--kraft);background:#fff;border-radius:14px;padding:10px 12px;cursor:pointer;display:grid;gap:2px;font-weight:800;color:var(--ink);text-align:left}
+.dish-size button small{font-weight:500;font-size:12.5px;color:var(--muted)}
+.dish-size button.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.dish-size button.on small{color:#c9c2b4}
+.dish-sheet h3 em{display:block;font-family:var(--font-body);font-style:normal;font-weight:700;font-size:13px;color:var(--ochre);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
+
 /* ---------- dish modal ---------- */
 .card[data-dish],.recipe[data-dish]{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
 .card[data-dish]:hover,.card[data-dish]:focus-visible{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,20,22,.14)}
@@ -1008,6 +1027,10 @@ footer a{color:#fff}
     <p class="eyebrow">Commander</p>
     <h3 id="dish-title"></h3>
     <p class="dish-how">Appelez-nous, Mario la prépare, et vous passez la récupérer et la régler au comptoir, 7 rue Gabriel Péri à Ivry.</p>
+    <div class="dish-size" id="dish-size" hidden>
+      <button type="button" class="on" data-size="senior">Senior<small>1 personne</small></button>
+      <button type="button" data-size="duo">Duo<small>2 personnes · +2 €</small></button>
+    </div>
     <a class="dish-call" data-link="tel" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>Appeler le <b data-field="phone"></b></a>
     <p class="dish-status" id="dish-status"></p>
   </div>
@@ -1066,7 +1089,7 @@ const CONFIG = {
   ],
   menu: {
     pizza: {
-      sizeNote: "Taille Senior · Duo (2 pers.) +2 €",
+      sizeNote: "Duo pour 2 : +2 €",
       groups: [
         {title:"Base tomate", items:[
           {img:"photos/margherita.jpg", name:"Margherita", price:"7 €",    desc:"Sauce tomate, mozzarella, origan.", style:"rossa", tags:["Végétarienne"]},
@@ -1086,7 +1109,7 @@ const CONFIG = {
           {img:"photos/truffo.jpg", name:"Truffo",      price:"9,90 €", desc:"Crème de truffe, mozzarella, champignons, olives.", style:"bianca", tags:["Végétarienne"]}
         ]}
       ],
-      compose: {img:"photos/compose-pizza.jpg", title:"Compose ta pizza ou ton calzone", price:"7,90 €", note:"Senior · Duo +2 € · garniture supplémentaire +2 €", steps:[
+      compose: {img:"photos/compose-pizza.jpg", title:"Compose ta pizza ou ton calzone", price:"7,90 €", note:"Duo pour 2 : +2 € · garniture supplémentaire +2 €", steps:[
         ["Choisis ta base","Sauce tomate ou crème fraîche, toujours avec mozzarella"],
         ["Choisis 2 garnitures","Merguez, bœuf, poulet, lardon fumé, jambon, saumon, thon"],
         ["Pizza ou calzone","Ouverte, ou pliée et dorée au four"]
@@ -1156,7 +1179,7 @@ function openStatus(){
   // carte
   const cards=document.getElementById("cards");
   const card=m=>`
-      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
+      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style&&m.style!=="panuozzo"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
         ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name} — pizza Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
         <div class="body">
           <div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div>
@@ -1167,9 +1190,10 @@ function openStatus(){
   const CAT_TITLES={pizza:"Pizzas",panuozzo:"Panuozzi & piadine",dessert:"Desserts",boisson:"Boissons"};
   function renderCat(cat){
     const c=CONFIG.menu[cat]; let h="";
+    if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>Taille standard, pour 1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>Plus grande, pour 2 personnes. Dites « Duo » en commandant.</span></div></div>`; }
     if(c.hero){ h+=`<div class="cathero"><img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async"><div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; const recipe=m=>`<div class="recipe" data-dish="${m.name}" data-price="${m.price}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; const recipe=m=>`<div class="recipe" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style&&m.style!=="panuozzo"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
@@ -1190,7 +1214,11 @@ function openStatus(){
 
   // clic sur un plat → proposer d'appeler
   const modal=document.getElementById("dish-modal"), mTitle=document.getElementById("dish-title"), mStatus=document.getElementById("dish-status");
-  function openDish(el){ mTitle.innerHTML=el.dataset.dish+"<span>"+el.dataset.price+"</span>"; const st=openStatus(); mStatus.textContent=st.open?"Ouvert maintenant, on décroche.":"Fermé pour le moment · "+st.next; mStatus.className="dish-status"+(st.open?" open":""); modal.hidden=false; document.body.style.overflow="hidden"; modal.querySelector(".dish-call").focus(); }
+  const sizeBox=document.getElementById("dish-size"); let cur=null;
+  const euro=n=>n.toFixed(2).replace(".",",").replace(",00","")+" €";
+  function setSize(sz){ sizeBox.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.size===sz)); const base=parseFloat(cur.dataset.price.replace("€","").replace(",",".")); mTitle.innerHTML=cur.dataset.dish+"<span>"+euro(sz==="duo"?base+2:base)+"</span>"+(sz==="duo"?"<em>Duo · 2 pers.</em>":""); }
+  sizeBox.addEventListener("click",e=>{ const b=e.target.closest("button[data-size]"); if(b) setSize(b.dataset.size); });
+  function openDish(el){ cur=el; const isPizza=!!el.closest("#carte-pizza")||document.querySelector(".tab[aria-selected=true]")?.dataset.cat==="pizza"&&el.classList.contains("card"); sizeBox.hidden=!(el.dataset.pizza==="1"); if(el.dataset.pizza==="1") setSize("senior"); else mTitle.innerHTML=el.dataset.dish+"<span>"+el.dataset.price+"</span>"; const st=openStatus(); mStatus.textContent=st.open?"Ouvert maintenant, on décroche.":"Fermé pour le moment · "+st.next; mStatus.className="dish-status"+(st.open?" open":""); modal.hidden=false; document.body.style.overflow="hidden"; modal.querySelector(".dish-call").focus(); }
   function closeDish(){ modal.hidden=true; document.body.style.overflow=""; }
   cards.addEventListener("click",e=>{ const el=e.target.closest("[data-dish]"); if(el) openDish(el); });
   cards.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ const el=e.target.closest("[data-dish]"); if(el){ e.preventDefault(); openDish(el); } } });
