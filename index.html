@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chez Mario · Restaurant italien halal à Ivry-sur-Seine · Pizzas, panuozzi, piadine</title>
-<meta name="description" content="Chez Mario, restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri. Pizzas dès 7 €, panuozzi et piadine napolitains, tiramisu spéculoos. Ouvert du mardi au dimanche. Commandez par téléphone, récupérez au comptoir.">
+<meta name="description" content="Chez Mario, restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri. Pizzas dès 7 €, panuozzi et piadine napolitains, tiramisu spéculoos. Ouvert du mardi au dimanche. Commandez par téléphone, à emporter ou livré dès 20 €.">
 <meta name="keywords" content="restaurant italien Ivry-sur-Seine, restaurant italien halal Ivry, pizzeria Ivry, pizza halal Ivry, panuozzo, panuozzi, panozzo, panuzzo, panizza, panizzo, panuezzo, piadina, pizza à emporter 94200, pizza napolitaine, Chez Mario">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="FR-94">
@@ -14,14 +14,14 @@
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Chez Mario">
 <meta property="og:title" content="Chez Mario · Restaurant italien halal à Ivry-sur-Seine">
-<meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert du mardi au dimanche. Commande par téléphone, à emporter.">
+<meta property="og:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Commande par téléphone, à emporter ou livré dès 20 €.">
 <meta property="og:url" content="https://chezmario.vercel.app/">
 <meta property="og:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <meta property="og:image:width" content="1400">
 <meta property="og:image:height" content="1400">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Chez Mario · Restaurant italien halal à Ivry-sur-Seine">
-<meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Ouvert du mardi au dimanche. Commande par téléphone, à emporter.">
+<meta name="twitter:description" content="Pizzas, panuozzi et piadine faits par Mario. 100 % halal. Commande par téléphone, à emporter ou livré dès 20 €.">
 <meta name="twitter:image" content="https://chezmario.vercel.app/photos/hero.jpg">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
@@ -178,6 +178,7 @@ section{padding:84px 0}
 @media (max-width:820px){.compose.with-img{grid-template-columns:1fr}.compose.with-img>img{min-height:0;aspect-ratio:1}}
 .cathero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px}
 .cathero img{width:100%;border-radius:18px;aspect-ratio:1;object-fit:cover}
+.cathero.noimg{grid-template-columns:1fr;background:var(--paper);border:1px solid var(--kraft);border-radius:18px;padding:22px 24px}
 .cathero h3{font-size:34px;font-weight:900;margin-bottom:12px}
 .cathero p{color:var(--muted);margin:0;font-size:17px}
 @media (max-width:820px){.cathero{grid-template-columns:1fr}}
@@ -200,6 +201,8 @@ section{padding:84px 0}
 
 .recipes{display:grid;grid-template-columns:1fr 1fr;gap:18px 34px}
 .recipe{padding:18px 0;border-bottom:1px solid var(--kraft);display:grid;gap:8px}
+.recipe.has-img{grid-template-columns:96px 1fr;column-gap:16px}
+.recipe.has-img .thumb{grid-row:1/span 4;width:96px;height:96px;object-fit:cover;border-radius:12px}
 .recipe .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .recipe h3{font-size:24px;font-weight:700}
 .recipe .price{font-family:var(--font-display);font-weight:900;font-size:22px;color:var(--tomato);font-variant-numeric:tabular-nums}
@@ -466,7 +469,7 @@ footer a{color:#fff}
     "Restaurant Chez Mario",
     "Pizzeria Chez Mario Ivry-sur-Seine"
    ],
-   "description": "Restaurant italien halal à Ivry-sur-Seine. Pizzas base tomate ou crème, panuozzi et piadine napolitains, tiramisu spéculoos, sodas siciliens. Tout est préparé par Mario, à la commande. Commande par téléphone, à emporter.",
+   "description": "Restaurant italien halal à Ivry-sur-Seine. Pizzas base tomate ou crème, pizzas du chef, panuozzi et piadine napolitains, scaccate (baguettes farcies), tiramisu, sodas siciliens. Tout est préparé par Mario, à la commande. Commande par téléphone, à emporter ou livré dès 20 €.",
    "url": "https://chezmario.vercel.app/",
    "image": [
     "https://chezmario.vercel.app/photos/hero.jpg",
@@ -498,26 +501,6 @@ footer a{color:#fff}
     {
      "@type": "OpeningHoursSpecification",
      "dayOfWeek": [
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-     ],
-     "opens": "11:00",
-     "closes": "23:30",
-     "validThrough": "2026-11-30"
-    },
-    {
-     "@type": "OpeningHoursSpecification",
-     "dayOfWeek": "Sunday",
-     "opens": "18:00",
-     "closes": "23:30",
-     "validThrough": "2026-11-30"
-    },
-    {
-     "@type": "OpeningHoursSpecification",
-     "dayOfWeek": [
       "Monday",
       "Tuesday",
       "Wednesday",
@@ -526,8 +509,7 @@ footer a{color:#fff}
       "Saturday"
      ],
      "opens": "11:00",
-     "closes": "15:00",
-     "validFrom": "2026-12-01"
+     "closes": "14:30"
     },
     {
      "@type": "OpeningHoursSpecification",
@@ -540,15 +522,13 @@ footer a{color:#fff}
       "Saturday"
      ],
      "opens": "18:00",
-     "closes": "23:30",
-     "validFrom": "2026-12-01"
+     "closes": "23:30"
     },
     {
      "@type": "OpeningHoursSpecification",
      "dayOfWeek": "Sunday",
      "opens": "18:00",
-     "closes": "00:00",
-     "validFrom": "2026-12-01"
+     "closes": "23:30"
     }
    ],
    "hasMenu": {
@@ -579,6 +559,7 @@ footer a{color:#fff}
     "panizza",
     "panizzo",
     "piadina",
+    "scaccata",
     "cuisine italienne halal"
    ],
    "publicAccess": true,
@@ -610,7 +591,7 @@ footer a{color:#fff}
      "name": "Quels sont les horaires de Chez Mario ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Jusqu'au 30 novembre : du mardi au samedi de 11h à 23h30, le dimanche de 18h à 23h30, fermé le lundi. À partir du 1er décembre : du lundi au samedi de 11h à 15h et de 18h à 23h30, le dimanche de 18h à minuit. À emporter."
+      "text": "Du lundi au samedi de 11h à 14h30 et de 18h à 23h30, le dimanche de 18h à 23h30. À emporter, et en livraison à partir de 20 € de commande."
      }
     },
     {
@@ -618,7 +599,7 @@ footer a{color:#fff}
      "name": "Comment commander Chez Mario ?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Par téléphone : vous passez commande, Mario la prépare, et vous réglez sur place en venant la récupérer au 7 rue Gabriel Péri à Ivry-sur-Seine. Livraison Deliveroo et Uber Eats à venir."
+      "text": "Par téléphone : vous passez commande, Mario la prépare, et vous la récupérez au 7 rue Gabriel Péri à Ivry-sur-Seine. À partir de 20 € de commande, la livraison est possible, à demander au téléphone."
      }
     },
     {
@@ -700,7 +681,7 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Tonno",
-       "description": "Sauce tomate, mozzarella, thon, œuf, olives, oignons rouges.",
+       "description": "Sauce tomate, mozzarella, thon, œuf, olives, oignon rouge.",
        "offers": {
         "@type": "Offer",
         "price": "7.90",
@@ -710,14 +691,13 @@ footer a{color:#fff}
       },
       {
        "@type": "MenuItem",
-       "name": "Calzone",
-       "description": "Sauce tomate, mozzarella, jambon, œuf, champignons. Pizza pliée et dorée.",
+       "name": "Mexicaine",
+       "description": "Sauce tomate, mozzarella, merguez, viande hachée, oignons, poivrons, olives.",
        "offers": {
         "@type": "Offer",
-        "price": "7.90",
+        "price": "8.90",
         "priceCurrency": "EUR"
-       },
-       "image": "https://chezmario.vercel.app/photos/calzone.jpg"
+       }
       }
      ]
     },
@@ -739,7 +719,7 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Chèvre",
-       "description": "Crème fraîche, mozzarella, chèvre, miel, noix.",
+       "description": "Crème fraîche, mozzarella, chèvre, miel.",
        "offers": {
         "@type": "Offer",
         "price": "7.90",
@@ -750,7 +730,7 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Savoyarde",
-       "description": "Crème fraîche, mozzarella, pommes de terre, jambon, oignons rouges.",
+       "description": "Crème fraîche, mozzarella, pommes de terre, jambon, oignon rouge.",
        "offers": {
         "@type": "Offer",
         "price": "7.90",
@@ -772,24 +752,100 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Salmone",
-       "description": "Crème fraîche, mozzarella, saumon fumé, aneth frais, parmesan.",
-       "offers": {
-        "@type": "Offer",
-        "price": "8.90",
-        "priceCurrency": "EUR"
-       },
-       "image": "https://chezmario.vercel.app/photos/salmone.jpg"
-      },
-      {
-       "@type": "MenuItem",
-       "name": "Truffo",
-       "description": "Crème de truffe, mozzarella, champignons, olives.",
+       "description": "Crème fraîche, mozzarella, parmesan, saumon fumé, roquette.",
        "offers": {
         "@type": "Offer",
         "price": "9.90",
         "priceCurrency": "EUR"
        },
+       "image": "https://chezmario.vercel.app/photos/salmone.jpg"
+      }
+     ]
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Pizzas du chef",
+     "hasMenuItem": [
+      {
+       "@type": "MenuItem",
+       "name": "La Montagnarde",
+       "description": "Sauce tomate, crème fraîche, Fior di Latte, champignons poêlés, comté, chou rouge, bœuf fumé, amandes, miel.",
+       "offers": {
+        "@type": "Offer",
+        "price": "12.50",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "La Quattro Stagioni",
+       "description": "Sauce du chef, Fior di Latte, artichauts, champignons, olives, jambon de veau, pommes de terre rôties.",
+       "offers": {
+        "@type": "Offer",
+        "price": "13",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "La Diavola",
+       "description": "Sauce tomate, Fior di Latte, spianata piquante, gorgonzola, oignons rouges, parmesan, huile d'olive au basilic.",
+       "offers": {
+        "@type": "Offer",
+        "price": "13.50",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Pestorini",
+       "description": "Pesto, crème fraîche, Fior di Latte, stracciatella, roquette, poulet rôti émincé, tomates fraîches, Grana Padano, crème balsamique.",
+       "offers": {
+        "@type": "Offer",
+        "price": "14",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Truffe",
+       "description": "Crème de truffe, mozzarella, champignons, olives, jambon.",
+       "offers": {
+        "@type": "Offer",
+        "price": "14.90",
+        "priceCurrency": "EUR"
+       },
        "image": "https://chezmario.vercel.app/photos/truffo.jpg"
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Bresaola",
+       "description": "Crème fraîche, Fior di Latte, roquette, bresaola, burrata, tomates fraîches, copeaux de parmesan, huile d'olive au basilic.",
+       "offers": {
+        "@type": "Offer",
+        "price": "15.50",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Six Fromages",
+       "description": "Crème de fromage, Fior di Latte, parmesan, gorgonzola, raclette, comté, chèvre, noix, miel.",
+       "offers": {
+        "@type": "Offer",
+        "price": "15.50",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "La Mortadella",
+       "description": "Crème fraîche, Fior di Latte, stracciatella, mortadelle, burrata, éclats de pistache, parmesan, huile d'olive.",
+       "offers": {
+        "@type": "Offer",
+        "price": "16.50",
+        "priceCurrency": "EUR"
+       }
       }
      ]
     },
@@ -799,28 +855,8 @@ footer a{color:#fff}
      "hasMenuItem": [
       {
        "@type": "MenuItem",
-       "name": "Marizo",
-       "description": "Pesto, stracciatella, parmesan, bresaola, oignons caramélisés, roquette, basilic frais.",
-       "offers": {
-        "@type": "Offer",
-        "price": "12.50",
-        "priceCurrency": "EUR"
-       }
-      },
-      {
-       "@type": "MenuItem",
-       "name": "Vitello",
-       "description": "Jambon de veau, beurre demi-sel, comté, cornichons, roquette.",
-       "offers": {
-        "@type": "Offer",
-        "price": "12.50",
-        "priceCurrency": "EUR"
-       }
-      },
-      {
-       "@type": "MenuItem",
        "name": "Carnivoro",
-       "description": "Poulet affiné, bœuf séché, pesto, stracciatella, oignons caramélisés, parmesan, poivrons confits, roquette.",
+       "description": "Poulet affiné, bœuf séché, pesto, stracciatella, parmesan, oignons caramélisés, poivrons confits, roquette.",
        "offers": {
         "@type": "Offer",
         "price": "12.50",
@@ -836,6 +872,52 @@ footer a{color:#fff}
         "price": "12.50",
         "priceCurrency": "EUR"
        }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Pecorino",
+       "description": "Crème cacio e pepe, artichauts, champignons, chou rouge, comté, amandes grillées, parmesan, bœuf séché.",
+       "offers": {
+        "@type": "Offer",
+        "price": "12.50",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Mortadello",
+       "description": "Sauce 5 fromages, roquette, tomates séchées, burrata, graines de pistache, mortadelle.",
+       "offers": {
+        "@type": "Offer",
+        "price": "13.50",
+        "priceCurrency": "EUR"
+       }
+      }
+     ]
+    },
+    {
+     "@type": "MenuSection",
+     "name": "Scaccate (baguettes farcies)",
+     "hasMenuItem": [
+      {
+       "@type": "MenuItem",
+       "name": "Pollo",
+       "description": "Crème fraîche, mozzarella, poulet, pommes de terre, olives, champignons.",
+       "offers": {
+        "@type": "Offer",
+        "price": "9.90",
+        "priceCurrency": "EUR"
+       }
+      },
+      {
+       "@type": "MenuItem",
+       "name": "Beef",
+       "description": "Sauce tomate, viande hachée, mozzarella, oignons, poivrons.",
+       "offers": {
+        "@type": "Offer",
+        "price": "9.90",
+        "priceCurrency": "EUR"
+       }
       }
      ]
     },
@@ -846,20 +928,19 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Pan'Utella",
-       "description": "Pâte à pizza, Nutella, pistache",
+       "description": "Nutella ou pistache · amandes grillées ou noix, au choix",
        "offers": {
         "@type": "Offer",
-        "price": "5",
+        "price": "7",
         "priceCurrency": "EUR"
        }
       },
       {
        "@type": "MenuItem",
        "name": "Tiramisu",
-       "description": "Spéculoos & caramel",
        "offers": {
         "@type": "Offer",
-        "price": "3.50",
+        "price": "4",
         "priceCurrency": "EUR"
        }
       }
@@ -1098,7 +1179,7 @@ footer a{color:#fff}
     <a href="#adresse"><strong>7 rue Gabriel Péri</strong><span>Ivry-sur-Seine · M7 Mairie d'Ivry</span></a>
     <div><strong id="open-now">Horaires</strong><span data-hours-summary></span></div>
     <div><strong>100 % halal</strong><span>Toutes nos viandes</span></div>
-    <a href="#commander"><strong>À emporter</strong><span>Commande par téléphone, retrait au comptoir</span></a>
+    <a href="#commander"><strong>À emporter · Livraison dès 20 €</strong><span>Commande par téléphone</span></a>
   </div>
 </div>
 
@@ -1140,11 +1221,12 @@ footer a{color:#fff}
   <div class="wrap">
     <p class="eyebrow">La carte · 100 % halal</p>
     <h2>Ce qu'on vous prépare.</h2>
-    <p class="lede">Toutes nos pizzas sont en taille Senior ; comptez 2 € de plus pour la version Duo, pour deux. Panuozzi et piadine servis chauds. Et pour finir, un tiramisu.</p>
+    <p class="lede">Pizzas classiques en taille Senior (Duo pour deux : +2 €), pizzas du chef, panuozzi, piadine et scaccate servis chauds. Et pour finir, une Pan'Utella ou un tiramisu.</p>
     <div class="tabs" role="tablist" aria-label="Catégories">
       <button class="tab" role="tab" aria-selected="true" data-cat="all" id="tab-all" aria-controls="cards">Toute la carte</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="pizza" id="tab-pizza" aria-controls="cards">Pizzas</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="panuozzo" id="tab-panuozzo" aria-controls="cards">Panuozzi &amp; piadine</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="scaccata" id="tab-scaccata" aria-controls="cards">Scaccate</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="dessert" id="tab-dessert" aria-controls="cards">Desserts</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="boisson" id="tab-boisson" aria-controls="cards">Boissons</button>
     </div>
@@ -1172,12 +1254,12 @@ footer a{color:#fff}
   <div class="wrap">
     <div>
       <p class="eyebrow">Commander</p>
-      <h2>Vous appelez, on enfourne, vous récupérez.</h2>
-      <p class="lede">Pas d'application, pas d'intermédiaire : vous passez commande par téléphone, Mario la prépare, et vous réglez au comptoir en venant la chercher. Ouvert <span data-hours-sentence></span>.</p>
+      <h2>Vous appelez, on enfourne, vous récupérez… ou on vous livre.</h2>
+      <p class="lede">Pas de salle, pas d'application : vous passez commande par téléphone, Mario la prépare, et vous venez la chercher au comptoir. À partir de 20 € de commande, on peut aussi vous livrer. Ouvert <span data-hours-sentence></span>.</p>
       <ol class="steps">
         <li><i>1</i><div><strong>Appelez</strong><span>Dites-nous ce que vous voulez et l'heure à laquelle vous passez.</span></div></li>
         <li><i>2</i><div><strong>On prépare</strong><span>Tout part au four au moment convenu, pour que ce soit chaud.</span></div></li>
-        <li><i>3</i><div><strong>Vous récupérez</strong><span>7 rue Gabriel Péri, Ivry. Paiement sur place, carte ou espèces.</span></div></li>
+        <li><i>3</i><div><strong>Vous récupérez, ou on vous livre</strong><span>Retrait 7 rue Gabriel Péri, Ivry. Livraison possible dès 20 € de commande, à demander au téléphone.</span></div></li>
       </ol>
     </div>
     <div class="platforms">
@@ -1189,7 +1271,7 @@ footer a{color:#fff}
         <span>Venir au comptoir<small>7 rue Gabriel Péri, 94200 Ivry-sur-Seine</small></span>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
-      <div class="pickup"><strong>La livraison arrive.</strong> Deliveroo et Uber Eats sont en cours d'ouverture. En attendant, c'est au comptoir, et c'est aussi plus chaud.</div>
+      <div class="pickup"><strong>Livraison dès 20 €.</strong> Demandez-la au téléphone en passant commande. Deliveroo et Uber Eats arrivent bientôt.</div>
     </div>
   </div>
 </section>
@@ -1203,8 +1285,8 @@ footer a{color:#fff}
     <div class="qa">
       <details open><summary>Où manger un panuozzo à Ivry-sur-Seine ou près de Paris ?</summary><p>Chez Mario, 7 rue Gabriel Péri à Ivry-sur-Seine, à deux pas de la mairie d'Ivry et du métro Mairie d'Ivry (ligne 7). Le panuozzo (aussi écrit panozzo, panuzzo, panizza ou panizzo) est notre spécialité : quatre recettes à 12,50 €, ou à composer.</p></details>
       <details><summary>Chez Mario est-il halal ?</summary><p>Oui. Toutes nos viandes sont halal, sur les pizzas comme sur les panuozzi et piadine, sans exception.</p></details>
-      <details><summary>Quels sont les horaires ?</summary><p>Jusqu'au 30 novembre : du mardi au samedi de 11h à 23h30, le dimanche de 18h à 23h30, fermé le lundi. <strong>À partir du 1er décembre</strong> : du lundi au samedi de 11h à 15h et de 18h à 23h30, le dimanche de 18h à minuit. À emporter.</p></details>
-      <details><summary>Comment commander ?</summary><p>Par téléphone, au <span data-field="phone"></span>. Vous indiquez votre commande et l'heure de passage, Mario la prépare, et vous réglez sur place en la récupérant au 7 rue Gabriel Péri. La livraison via Deliveroo et Uber Eats arrive prochainement.</p></details>
+      <details><summary>Quels sont les horaires ?</summary><p>Du lundi au samedi de 11h à 14h30 et de 18h à 23h30, le dimanche de 18h à 23h30. À emporter, et en livraison à partir de 20 € de commande.</p></details>
+      <details><summary>Comment commander ?</summary><p>Par téléphone, au <span data-field="phone"></span>. Vous indiquez votre commande et l'heure de passage, Mario la prépare, et vous la récupérez au 7 rue Gabriel Péri. À partir de 20 € de commande, la livraison est possible : demandez-la au téléphone.</p></details>
       <details><summary>Quelle est la différence entre un panuozzo et une piadina ?</summary><p>Le panuozzo est un pain de pâte à pizza, épais et moelleux, cuit au four puis ouvert et garni. La piadina est une galette fine et souple. Chez Mario, chaque recette existe dans les deux versions, au même prix.</p></details>
       <details><summary>Quelle taille font les pizzas ?</summary><p>Toutes nos pizzas sont en taille Senior. Pour la version Duo, pour deux personnes, comptez 2 € de plus.</p></details>
     </div>
@@ -1243,7 +1325,7 @@ footer a{color:#fff}
     <button class="dish-close" type="button" data-close aria-label="Fermer">×</button>
     <p class="eyebrow">Commander</p>
     <h3 id="dish-title"></h3>
-    <p class="dish-how">Appelez-nous, Mario la prépare, et vous passez la récupérer et la régler au comptoir, 7 rue Gabriel Péri à Ivry.</p>
+    <p class="dish-how">Appelez-nous, Mario la prépare, et vous passez la récupérer au comptoir, 7 rue Gabriel Péri à Ivry. Livraison possible dès 20 € de commande.</p>
     <div class="dish-size" id="dish-size" hidden>
       <button type="button" class="on" data-size="senior">Senior<small>1 personne</small></button>
       <button type="button" data-size="duo">Duo<small>2 personnes · +2 €</small></button>
@@ -1268,7 +1350,7 @@ footer a{color:#fff}
 
 <section class="about-seo" aria-label="À propos">
   <div class="wrap">
-    <p><strong>Chez Mario</strong> est un restaurant italien halal à Ivry-sur-Seine (94), au 7 rue Gabriel Péri, près du métro Mairie d'Ivry. Pizzas napolitaines base tomate ou crème, panuozzi (aussi écrit panozzo, panuzzo, panizza ou panizzo) et piadine, tiramisu spéculoos et sodas siciliens, préparés à la commande par Mario. À emporter, midi et soir (horaires détaillés ci-dessus). Commande par téléphone.</p>
+    <p><strong>Chez Mario</strong> est un restaurant italien halal à Ivry-sur-Seine (94), au 7 rue Gabriel Péri, près du métro Mairie d'Ivry. Pizzas napolitaines base tomate ou crème, pizzas du chef, panuozzi (aussi écrit panozzo, panuzzo, panizza ou panizzo), piadine, scaccate (baguettes farcies), tiramisu et sodas siciliens, préparés à la commande par Mario. À emporter, midi et soir, ou livré à partir de 20 € de commande. Commande par téléphone.</p>
   </div>
 </section>
 
@@ -1295,72 +1377,85 @@ window.CONFIG = {
     maps:      "https://www.google.com/maps/search/?api=1&query=Chez+Mario+7+rue+Gabriel+P%C3%A9ri+94200+Ivry-sur-Seine",
     instagram: "https://www.instagram.com/chezmario94/"
   },
-  hoursSwitch: "2026-12-01",                     // date de bascule vers les nouveaux horaires
-  hoursBefore: {                                 // jusqu'au 30 novembre
-    label: "Jusqu'au 30 novembre",
-    summary: "Mar–Sam 11h–23h30 · Dim 18h–23h30 · Lun fermé",
-    sentence: "du mardi au samedi de 11h à 23h30, le dimanche de 18h à 23h30 ; fermé le lundi",
-    table: [["Lundi","Fermé"],["Mardi","11h – 23h30"],["Mercredi","11h – 23h30"],["Jeudi","11h – 23h30"],["Vendredi","11h – 23h30"],["Samedi","11h – 23h30"],["Dimanche","18h – 23h30"]],
-    ranges: [null,[[660,1410]],[[660,1410]],[[660,1410]],[[660,1410]],[[660,1410]],[[1080,1410]]]
-  },
-  hoursAfter: {                                  // à partir du 1er décembre
-    label: "À partir du 1er décembre",
-    summary: "Lun–Sam 11h–15h · 18h–23h30 · Dim 18h–minuit",
-    sentence: "du lundi au samedi de 11h à 15h et de 18h à 23h30, le dimanche de 18h à minuit",
-    table: [["Lundi","11h – 15h · 18h – 23h30"],["Mardi","11h – 15h · 18h – 23h30"],["Mercredi","11h – 15h · 18h – 23h30"],["Jeudi","11h – 15h · 18h – 23h30"],["Vendredi","11h – 15h · 18h – 23h30"],["Samedi","11h – 15h · 18h – 23h30"],["Dimanche","18h – minuit"]],
-    ranges: [[[660,900],[1080,1410]],[[660,900],[1080,1410]],[[660,900],[1080,1410]],[[660,900],[1080,1410]],[[660,900],[1080,1410]],[[660,900],[1080,1410]],[[1080,1440]]]
+  hoursSwitch: "2026-11-22",                     // nouveaux horaires en vigueur
+  hoursBefore: null,
+  hoursAfter: {
+    label: "Horaires",
+    summary: "Lun–Sam 11h–14h30 · 18h–23h30 · Dim 18h–23h30",
+    sentence: "du lundi au samedi de 11h à 14h30 et de 18h à 23h30, le dimanche de 18h à 23h30",
+    table: [["Lundi","11h – 14h30 · 18h – 23h30"],["Mardi","11h – 14h30 · 18h – 23h30"],["Mercredi","11h – 14h30 · 18h – 23h30"],["Jeudi","11h – 14h30 · 18h – 23h30"],["Vendredi","11h – 14h30 · 18h – 23h30"],["Samedi","11h – 14h30 · 18h – 23h30"],["Dimanche","18h – 23h30"]],
+    ranges: [[[660,870],[1080,1410]],[[660,870],[1080,1410]],[[660,870],[1080,1410]],[[660,870],[1080,1410]],[[660,870],[1080,1410]],[[660,870],[1080,1410]],[[1080,1410]]]
   },
   menu: {
     pizza: {
       sizeNote: "Duo pour 2 : +2 €",
       groups: [
         {title:"Base tomate", items:[
-          {img:"photos/margherita.jpg", name:"Margherita", price:"7 €",    desc:"Sauce tomate, mozzarella, origan.", style:"rossa", tags:["Végétarienne"]},
+          {img:"photos/margherita.jpg", name:"Margherita", price:"7 €", desc:"Sauce tomate, mozzarella, origan.", style:"rossa", tags:["Végétarienne"]},
           {img:"photos/4fromages-tomate-v2.jpg", name:"4 Fromages", price:"7,90 €", desc:"Sauce tomate, mozzarella, gorgonzola, chèvre, parmesan.", style:"rossa", tags:["Végétarienne"]},
-          {img:"photos/regina.jpg", name:"Regina",     price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, champignons.", style:"rossa", tags:[]},
-          {img:"photos/verone.jpg", name:"Vérone",     price:"7,90 €", desc:"Sauce tomate, mozzarella, poulet rôti, champignons.", style:"rossa", tags:[]},
-          {img:"photos/orientale.jpg", name:"Orientale",  price:"7,90 €", desc:"Sauce tomate, mozzarella, merguez, poivrons, oignons.", style:"rossa", tags:["Épicée"]},
-          {img:"photos/tonno.jpg", name:"Tonno",      price:"7,90 €", desc:"Sauce tomate, mozzarella, thon, œuf, olives, oignons rouges.", style:"rossa", tags:[]},
-          {img:"photos/calzone.jpg", name:"Calzone",    price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, œuf, champignons. Pizza pliée et dorée.", style:"rossa", tags:[]}
+          {img:"photos/regina.jpg", name:"Regina", price:"7,90 €", desc:"Sauce tomate, mozzarella, jambon, champignons.", style:"rossa", tags:[]},
+          {img:"photos/verone.jpg", name:"Vérone", price:"7,90 €", desc:"Sauce tomate, mozzarella, poulet rôti, champignons.", style:"rossa", tags:[]},
+          {img:"photos/orientale.jpg", name:"Orientale", price:"7,90 €", desc:"Sauce tomate, mozzarella, merguez, poivrons, oignons.", style:"rossa", tags:["Épicée"]},
+          {img:"photos/tonno.jpg", name:"Tonno", price:"7,90 €", desc:"Sauce tomate, mozzarella, thon, œuf, olives, oignon rouge.", style:"rossa", tags:[]},
+          {name:"Mexicaine", price:"8,90 €", desc:"Sauce tomate, mozzarella, merguez, viande hachée, oignons, poivrons, olives.", style:"rossa", tags:["Épicée"]}
         ]},
         {title:"Base crème fraîche", items:[
           {img:"photos/pizza-mario-v2.jpg", name:"Pizza Mario", price:"7,90 €", desc:"Crème fraîche, mozzarella, poulet rôti, fromage à raclette, oignons confits.", style:"bianca", tags:["Signature"]},
-          {img:"photos/chevre.jpg", name:"Chèvre", price:"7,90 €", desc:"Crème fraîche, mozzarella, chèvre, miel, noix.", style:"bianca", tags:["Végétarienne"]},
-          {img:"photos/savoyarde.jpg", name:"Savoyarde",   price:"7,90 €", desc:"Crème fraîche, mozzarella, pommes de terre, jambon, oignons rouges.", style:"bianca", tags:[]},
+          {img:"photos/chevre.jpg", name:"Chèvre", price:"7,90 €", desc:"Crème fraîche, mozzarella, chèvre, miel.", style:"bianca", tags:["Végétarienne"]},
+          {img:"photos/savoyarde.jpg", name:"Savoyarde", price:"7,90 €", desc:"Crème fraîche, mozzarella, pommes de terre, jambon, oignon rouge.", style:"bianca", tags:[]},
           {img:"photos/4fromages-creme.jpg", name:"4 Fromages", price:"7,90 €", desc:"Crème fraîche, mozzarella, gorgonzola, chèvre, parmesan.", style:"bianca", tags:["Végétarienne"]},
-          {img:"photos/salmone.jpg", name:"Salmone",     price:"8,90 €", desc:"Crème fraîche, mozzarella, saumon fumé, aneth frais, parmesan.", style:"bianca", tags:[]},
-          {img:"photos/truffo.jpg", name:"Truffo",      price:"9,90 €", desc:"Crème de truffe, mozzarella, champignons, olives.", style:"bianca", tags:["Végétarienne"]}
+          {img:"photos/salmone.jpg", name:"Salmone", price:"9,90 €", desc:"Crème fraîche, mozzarella, parmesan, saumon fumé, roquette.", style:"bianca", tags:[]}
+        ]},
+        {title:"Les pizzas du chef", note:"Recettes signature, mozzarella Fior di Latte", layout:"list", items:[
+          {name:"La Montagnarde", price:"12,50 €", desc:"Sauce tomate, crème fraîche, Fior di Latte, champignons poêlés, comté, chou rouge, bœuf fumé, amandes, miel.", style:"chef", tags:[]},
+          {name:"La Quattro Stagioni", price:"13 €", desc:"Sauce du chef, Fior di Latte, artichauts, champignons, olives, jambon de veau, pommes de terre rôties.", style:"chef", tags:[]},
+          {name:"La Diavola", price:"13,50 €", desc:"Sauce tomate, Fior di Latte, spianata piquante, gorgonzola, oignons rouges, parmesan, huile d'olive au basilic.", style:"chef", tags:["Épicée"]},
+          {name:"Pestorini", price:"14 €", desc:"Pesto, crème fraîche, Fior di Latte, stracciatella, roquette, poulet rôti émincé, tomates fraîches, Grana Padano, crème balsamique.", style:"chef", tags:[]},
+          {img:"photos/truffo.jpg", name:"Truffe", price:"14,90 €", desc:"Crème de truffe, mozzarella, champignons, olives, jambon.", style:"chef", tags:[]},
+          {name:"Bresaola", price:"15,50 €", desc:"Crème fraîche, Fior di Latte, roquette, bresaola, burrata, tomates fraîches, copeaux de parmesan, huile d'olive au basilic.", style:"chef", tags:[]},
+          {name:"Six Fromages", price:"15,50 €", desc:"Crème de fromage, Fior di Latte, parmesan, gorgonzola, raclette, comté, chèvre, noix, miel.", style:"chef", tags:["Végétarienne"]},
+          {name:"La Mortadella", price:"16,50 €", desc:"Crème fraîche, Fior di Latte, stracciatella, mortadelle, burrata, éclats de pistache, parmesan, huile d'olive.", style:"chef", tags:[]}
         ]}
-      ],
-      compose: {img:"photos/compose-pizza.jpg", title:"Compose ta pizza ou ton calzone", price:"7,90 €", note:"Duo pour 2 : +2 € · garniture supplémentaire +2 €", steps:[
-        ["Choisis ta base","Sauce tomate ou crème fraîche, toujours avec mozzarella"],
-        ["Choisis 2 garnitures","Merguez, bœuf, poulet, lardon fumé, jambon, saumon, thon"],
-        ["Pizza ou calzone","Ouverte, ou pliée et dorée au four"]
-      ]}
+      ]
     },
     panuozzo: {
       sizeNote: "Panuozzo ou piadina, au choix",
-      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud. On l'écrit panuozzo, mais on nous le demande aussi en panozzo, panuzzo, panizza ou panizzo : c'est le même, et c'est ici qu'on le trouve à Ivry. Quatre recettes, ou le vôtre en cinq étapes. Chaque recette existe aussi en piadina."},
+      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud. On l'écrit panuozzo, mais on nous le demande aussi en panozzo, panuzzo, panizza ou panizzo : c'est le même, et c'est ici qu'on le trouve à Ivry. Quatre recettes, ou le vôtre à composer. Chaque recette existe aussi en piadina."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
-          {name:"Marizo",    price:"12,50 €", desc:"Pesto, stracciatella, parmesan, bresaola, oignons caramélisés, roquette, basilic frais.", style:"panuozzo", tags:["Signature"]},
-          {name:"Vitello",   price:"12,50 €", desc:"Jambon de veau, beurre demi-sel, comté, cornichons, roquette.", style:"panuozzo", tags:[]},
-          {name:"Carnivoro", price:"12,50 €", desc:"Poulet affiné, bœuf séché, pesto, stracciatella, oignons caramélisés, parmesan, poivrons confits, roquette.", style:"panuozzo", tags:[]},
-          {name:"Palerme",   price:"12,50 €", desc:"Pastrami, salami pepperoni, pesto, stracciatella, parmesan, poivrons confits, roquette, basilic frais.", style:"panuozzo", tags:["Épicé"]}
+          {name:"Carnivoro",  price:"12,50 €", desc:"Poulet affiné, bœuf séché, pesto, stracciatella, parmesan, oignons caramélisés, poivrons confits, roquette.", style:"panuozzo", tags:[]},
+          {name:"Palerme",    price:"12,50 €", desc:"Pastrami, salami pepperoni, pesto, stracciatella, parmesan, poivrons confits, roquette, basilic frais.", style:"panuozzo", tags:["Épicé"]},
+          {name:"Pecorino",   price:"12,50 €", desc:"Crème cacio e pepe, artichauts, champignons, chou rouge, comté, amandes grillées, parmesan, bœuf séché.", style:"panuozzo", tags:[]},
+          {name:"Mortadello", price:"13,50 €", desc:"Sauce 5 fromages, roquette, tomates séchées, burrata, graines de pistache, mortadelle.", style:"panuozzo", tags:["Signature"]}
         ]}
       ],
-      compose: {img:"photos/compose-panuozzo.jpg", title:"Compose ton panuozzo", price:"12,50 €", note:"sauce truffe +1 €", steps:[
-        ["Choisis ta crème","Pesto, beurre demi-sel, huile d'olive ou sauce truffe"],
-        ["Choisis ton fromage","Stracciatella, comté ou parmesan"],
-        ["Jusqu'à 4 garnitures","Roquette, oignons caramélisés, tomates confites, tomates séchées, poivrons confits, cornichons"],
-        ["1 ou 2 viandes","Jambon de veau, poulet affiné, pastrami, bresaola, salami pepperoni"],
+      compose: {img:"photos/compose-panuozzo.jpg", title:"Compose ton panuozzo", price:"12,50 €", note:"sauce truffe +1 € · extra amandes grillées, noix ou pistache +1 €", steps:[
+        ["Choisis ta base","Sauce tomate, crème fraîche, sauce du chef, sauce fromage, pesto, ou sauce truffe (+1 €)"],
+        ["Choisis ton fromage","Stracciatella, comté, parmesan, gorgonzola ou raclette"],
+        ["Jusqu'à 4 garnitures","Roquette, oignons caramélisés, tomates confites, tomates séchées, poivrons confits, cornichons, artichauts, chou rouge"],
+        ["1 ou 2 viandes","Jambon de veau, poulet affiné, pastrami, bresaola, salami pepperoni, mortadelle, bœuf séché"],
         ["Touche de balsamique","Au choix, pour finir"]
       ]}
     },
+    scaccata: {
+      hero: {img:"", title:"La scaccata", text:"Une baguette farcie, garnie puis passée au four. Deux recettes, ou la vôtre à composer."},
+      groups: [
+        {title:"Nos recettes", layout:"list", items:[
+          {name:"Pollo", price:"9,90 €", desc:"Crème fraîche, mozzarella, poulet, pommes de terre, olives, champignons.", style:"scaccata", tags:[]},
+          {name:"Beef",  price:"9,90 €", desc:"Sauce tomate, viande hachée, mozzarella, oignons, poivrons.", style:"scaccata", tags:[]}
+        ]}
+      ],
+      compose: {title:"Compose ta scaccata", price:"11,90 €", note:"sauce truffe +1 € · extra amandes grillées, noix ou pistache +1 €", steps:[
+        ["Choisis ta base","Sauce tomate, crème fraîche, sauce du chef, sauce fromage, pesto, ou sauce truffe (+1 €)"],
+        ["Choisis ton fromage","Stracciatella, comté, parmesan, gorgonzola ou raclette"],
+        ["Jusqu'à 4 garnitures","Roquette, oignons caramélisés, tomates confites, tomates séchées, poivrons confits, cornichons, artichauts"],
+        ["1 ou 2 viandes","Viande hachée, poulet, jambon de veau, poulet affiné, pastrami, bresaola, salami pepperoni, mortadelle, bœuf séché"]
+      ]}
+    },
     dessert: {
-      hero: {img:"photos/tiramisu.jpg", title:"Le tiramisu", text:"Mascarpone, spéculoos et caramel. Et pour les gourmands, la Pan'Utella : une pâte à pizza au Nutella et à la pistache."},
+      hero: {img:"photos/tiramisu.jpg", title:"Les desserts", text:"Le tiramisu, et la Pan'Utella : une pâte à pizza garnie de Nutella ou de crème de pistache, avec amandes grillées ou noix, au choix."},
       lists: [
-        {title:"Nos douceurs", items:[["Pan'Utella","Pâte à pizza, Nutella, pistache","5 €"],["Tiramisu","Spéculoos & caramel","3,50 €"]]}
+        {title:"Nos douceurs", items:[["Pan'Utella","Nutella ou pistache · amandes grillées ou noix, au choix","7 €"],["Tiramisu","","4 €"]]}
       ]
     },
     boisson: {
@@ -1376,7 +1471,7 @@ window.CONFIG = {
 
 // horaires : [ouverture, fermeture] en minutes, null = fermé ; index 0 = lundi
 const DAYS=["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
-window.currentHours=function(){ return new Date()>=new Date(CONFIG.hoursSwitch+"T00:00:00") ? CONFIG.hoursAfter : CONFIG.hoursBefore; };
+window.currentHours=function(){ return (!CONFIG.hoursBefore||new Date()>=new Date(CONFIG.hoursSwitch+"T00:00:00")) ? CONFIG.hoursAfter : CONFIG.hoursBefore; };
 window.openStatus=function(){
   const H=currentHours().ranges, d=new Date(), day=(d.getDay()+6)%7, m=d.getHours()*60+d.getMinutes();
   const fmt=x=>{ x=x%1440; return x===0?"minuit":Math.floor(x/60)+"h"+(x%60?String(x%60).padStart(2,"0"):""); };
@@ -1398,7 +1493,7 @@ window.openStatus=function(){
 
   // horaires
   const today=(new Date().getDay()+6)%7; // lundi = 0
-  const sched=currentHours(), upcoming=sched===CONFIG.hoursBefore?CONFIG.hoursAfter:null;
+  const sched=currentHours(), upcoming=(CONFIG.hoursBefore&&sched===CONFIG.hoursBefore)?CONFIG.hoursAfter:null;
   const row=(h,i,mark)=>`<tr class="${h[1]==="Fermé"?"closed":""}"${mark&&i===today?' style="font-weight:700"':''}><td>${h[0]}${mark&&i===today?" <small style='color:var(--muted);font-weight:500'>(aujourd'hui)</small>":""}</td><td>${h[1]}</td></tr>`;
   document.getElementById("hours").innerHTML=sched.table.map((h,i)=>row(h,i,true)).join("");
   document.querySelectorAll("[data-hours-sentence]").forEach(e=>e.textContent=sched.sentence);
@@ -1409,7 +1504,7 @@ window.openStatus=function(){
   // carte
   const cards=document.getElementById("cards");
   const card=m=>`
-      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style&&m.style!=="panuozzo"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
+      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
         ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name} — pizza Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
         <div class="body">
           <div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div>
@@ -1417,13 +1512,13 @@ window.openStatus=function(){
           <div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div>
         </div>
       </article>`;
-  const CAT_TITLES={pizza:"Pizzas",panuozzo:"Panuozzi & piadine",dessert:"Desserts",boisson:"Boissons"};
+  const CAT_TITLES={pizza:"Pizzas",panuozzo:"Panuozzi & piadine",scaccata:"Scaccate · baguettes farcies",dessert:"Desserts",boisson:"Boissons"};
   function renderCat(cat){
     const c=CONFIG.menu[cat]; let h="";
-    if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>Taille standard, pour 1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>Plus grande, pour 2 personnes. Dites « Duo » en commandant.</span></div></div>`; }
-    if(c.hero){ h+=`<div class="cathero"><img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async"><div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
+    if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>Taille standard, pour 1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>Plus grande, pour 2 personnes, sur les bases tomate et crème. Dites « Duo » en commandant.</span></div></div>`; }
+    if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${i===0&&c.sizeNote?`<span>${c.sizeNote}</span>`:""}</div>`; const recipe=m=>`<div class="recipe" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style&&m.style!=="panuozzo"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander"><div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;

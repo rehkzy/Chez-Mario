@@ -1,22 +1,24 @@
 # Chez Mario
 
-> Restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri, près du métro Mairie d'Ivry (ligne 7). Pizzas napolitaines, panuozzi et piadine préparés à la commande par Mario. Toutes les viandes sont halal. À emporter, commande par téléphone, ouvert midi et soir (voir horaires).
+> Restaurant italien halal à Ivry-sur-Seine (94200), 7 rue Gabriel Péri, près du métro Mairie d'Ivry (ligne 7). Pizzas napolitaines, pizzas du chef, panuozzi, piadine et scaccate préparés à la commande par Mario. Toutes les viandes sont halal. Pas de salle : à emporter, ou livraison à partir de 20 € de commande. Commande par téléphone.
 
 ## Essentiel
 - Nom : Chez Mario
 - Type : restaurant italien, pizzeria, halal
 - Adresse : 7 rue Gabriel Péri, 94200 Ivry-sur-Seine, France
-- Horaires jusqu'au 30 novembre 2026 : mardi à samedi 11h – 23h30, dimanche 18h – 23h30, fermé le lundi
-- Horaires à partir du 1er décembre 2026 : lundi à samedi 11h – 15h et 18h – 23h30, dimanche 18h – minuit
 - Téléphone : 09 72 84 74 29
-- Commande : par téléphone, retrait et paiement au comptoir (carte ou espèces). Livraison Deliveroo / Uber Eats à venir.
+- Horaires : lundi à samedi 11h – 14h30 et 18h – 23h30, dimanche 18h – 23h30
+- Commande : par téléphone. Retrait et paiement au comptoir, ou livraison à partir de 20 € de commande. Deliveroo / Uber Eats à venir.
 - Instagram : https://www.instagram.com/chezmario94/
 - Site : https://chezmario.vercel.app/
 
 ## Spécialités
-- Panuozzo (aussi écrit panozzo, panuzzo, panizza, panizzo) : pain de pâte à pizza cuit au four, ouvert et garni à chaud. 4 recettes à 12,50 € (Marizo, Vitello, Carnivoro, Palerme) ou à composer. Chaque recette existe aussi en piadina.
-- Pizzas base tomate ou crème fraîche, taille Senior, à partir de 7 € (Duo +2 €) : Margherita 7 €, 4 Fromages, Regina, Vérone, Orientale, Tonno, Calzone 7,90 €, Pizza Mario, Chèvre, Savoyarde 7,90 €, Salmone 8,90 €, Truffo 9,90 €.
-- Desserts : Pan'Utella (pâte à pizza, Nutella, pistache) 5 €, tiramisu spéculoos & caramel 3,50 €.
+- Panuozzo (aussi écrit panozzo, panuzzo, panizza, panizzo) : pain de pâte à pizza cuit au four, ouvert et garni à chaud. Carnivoro, Palerme, Pecorino 12,50 €, Mortadello 13,50 €, ou à composer 12,50 €. Chaque recette existe aussi en piadina.
+- Scaccata (baguette farcie) : Pollo, Beef 9,90 €, ou à composer 11,90 €.
+- Pizzas base tomate (taille Senior, Duo pour 2 : +2 €) : Margherita 7 €, 4 Fromages, Regina, Vérone, Orientale, Tonno 7,90 €, Mexicaine 8,90 €.
+- Pizzas base crème fraîche : Pizza Mario, Chèvre, Savoyarde, 4 Fromages 7,90 €, Salmone 9,90 €.
+- Pizzas du chef : La Montagnarde 12,50 €, La Quattro Stagioni 13 €, La Diavola 13,50 €, Pestorini 14 €, Truffe 14,90 €, Bresaola 15,50 €, Six Fromages 15,50 €, La Mortadella 16,50 €.
+- Desserts : Pan'Utella (Nutella ou pistache, amandes grillées ou noix) 7 €, tiramisu 4 €.
 - Boissons : sodas siciliens Polara (Arancia Rossa, Limonata, Mandarino Verde, Thè Pesca) 2,90 €, sodas classiques 1,80 €, eau 1 €.
 
 ## Pages
