@@ -203,10 +203,9 @@ section{padding:84px 0}
 
 .recipes{display:grid;grid-template-columns:1fr 1fr;gap:18px 34px}
 .recipe{padding:18px 0;border-bottom:1px solid var(--kraft);display:grid;gap:8px}
-.recipe.has-img{grid-template-columns:96px 1fr;column-gap:16px}
-.recipe.has-img .thumb{grid-row:1/span 4;width:96px;height:96px;object-fit:cover;border-radius:12px}
-.recipe.has-img .thumb[src*="polara"]{width:52px;height:140px;object-fit:cover;border-radius:10px}
-.recipe.has-img:has(.thumb[src*="polara"]){grid-template-columns:52px 1fr}
+.recipe.has-img{grid-template-columns:104px 1fr;column-gap:16px}
+.recipe.has-img .thumb{grid-row:1/span 4;width:104px;height:104px;object-fit:cover;border-radius:12px;align-self:start}
+
 
 .recipe .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .recipe h3{font-size:24px;font-weight:700}
@@ -1006,7 +1005,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-arancia-thumb.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-arancia.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1017,7 +1016,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-limonata-thumb.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-limonata.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1028,7 +1027,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-mandarino-thumb.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-mandarino.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1039,7 +1038,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-the-pesca-thumb.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-the-pesca.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1516,10 +1515,10 @@ window.CONFIG = {
       hero: {img:"photos/boissons-v2.jpg", title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
       groups: [
         {title:"Sodas siciliens Polara", note:"2,90 €", layout:"list", items:[
-          {img:"photos/polara-arancia-thumb.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-limonata-thumb.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-mandarino-thumb.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-the-pesca-thumb.jpg", name:"Thè Pesca", price:"2,90 €", desc:"Thé noir infusé à la pêche.", style:"boisson", tags:[]}
+          {img:"photos/polara-arancia.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-limonata.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-mandarino.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-the-pesca.jpg", name:"Thè Pesca", price:"2,90 €", desc:"Thé noir infusé à la pêche.", style:"boisson", tags:[]}
         ]}
       ],
       lists: [
