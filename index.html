@@ -144,9 +144,10 @@ section{padding:84px 0}
 @media (max-width:820px){.dough{grid-template-columns:1fr 1fr;margin-top:26px;gap:10px}.dough-text{grid-column:1/-1;order:-1;padding:22px 20px}}
 
 /* bandeau catégorie pleine largeur */
-.cathero.wide{grid-template-columns:1fr!important;gap:16px!important}
-.cathero.wide img{aspect-ratio:16/9!important;max-height:460px;object-position:center 0%;border-radius:18px!important}
-@media (max-width:720px){.cathero.wide img{aspect-ratio:5/4!important;object-position:center 0%;border-radius:14px!important}.cathero.wide h3{font-size:24px}}
+/* PC : photo carrée entière à gauche + texte ; mobile : bandeau pleine largeur */
+.cathero.wide{grid-template-columns:minmax(300px,420px) 1fr;gap:34px;align-items:center}
+.cathero.wide img{aspect-ratio:1;object-fit:cover;object-position:center;border-radius:18px}
+@media (max-width:720px){.cathero.wide{grid-template-columns:1fr!important;gap:16px!important}.cathero.wide img{aspect-ratio:5/4!important;object-position:center 0%;border-radius:14px!important}.cathero.wide h3{font-size:24px}}
 
 /* ---------- menu ---------- */
 .menu{background:#fff}
