@@ -377,11 +377,11 @@ section{padding:84px 0}
   .subhead span{font-size:11px;white-space:normal}
   /* carte compacte : vignette + texte sur une ligne */
   .cards{display:grid;grid-template-columns:1fr;gap:10px}
-  .card{flex-direction:row;align-items:stretch;border-radius:14px}
-  .card .photo{aspect-ratio:1;width:104px;flex:none;border-radius:0}
+  .card{flex-direction:row;align-items:flex-start;border-radius:14px}
+  .card .photo{aspect-ratio:1;width:104px;height:104px;flex:none;border-radius:10px;margin:10px 0 10px 10px;overflow:hidden}
   .card .photo .label{font-size:9px;bottom:6px;right:6px;left:6px;text-align:center}
   .card .photo .disc{width:60%}
-  .card .photo img{object-position:center 58%!important}
+  .card .photo img{object-position:center center!important}
   .card .body{padding:12px 14px;gap:4px}
   .card h3{font-size:17px}
   .card .price{font-size:17px}
