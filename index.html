@@ -145,10 +145,10 @@ section{padding:84px 0}
 
 /* bandeau catégorie pleine largeur */
 .cathero.wide{grid-template-columns:1fr!important;gap:16px!important}
-.cathero.wide img{aspect-ratio:16/9!important;object-position:center 30%;border-radius:18px!important}
-.cathero.wide img[src*="panuozzo"]{object-position:center 45%}
-.cathero.wide img[src*="scaccata"]{object-position:center 55%}
-@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide img[src*="panuozzo"],.cathero.wide img[src*="scaccata"]{aspect-ratio:1!important;object-position:center 50%}.cathero.wide h3{font-size:24px}}
+.cathero.wide img{aspect-ratio:21/9!important;max-height:380px;object-position:center 30%;border-radius:18px!important}
+.cathero.wide img[src*="panuozzo"]{object-position:center 48%}
+.cathero.wide img[src*="scaccata"]{object-position:center 60%}
+@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide img[src*="panuozzo"]{aspect-ratio:4/3!important;object-position:center 50%}.cathero.wide img[src*="scaccata"]{aspect-ratio:4/3!important;object-position:center 60%}.cathero.wide h3{font-size:24px}}
 
 /* ---------- menu ---------- */
 .menu{background:#fff}
@@ -258,6 +258,23 @@ section{padding:84px 0}
 .platform.maps{background:var(--paper);color:var(--ink)}
 .platform small{font-variant-numeric:tabular-nums}
 .order .pickup{margin-top:4px}
+
+/* onglets défilants : indices de scroll */
+.tabwrap{position:relative}
+.tab .short{display:none}
+.tabfade{display:none}
+@media (max-width:720px){
+  .tabwrap{position:sticky;top:58px;z-index:15;background:#fff;margin:18px -16px 14px;box-shadow:0 8px 16px -12px rgba(0,0,0,.25)}
+  .tabwrap .tabs{position:static;margin:0;box-shadow:none;padding:10px 16px;gap:8px;scroll-padding:16px;scroll-snap-type:x proximity}
+  .tab{scroll-snap-align:start;padding:9px 16px;font-size:14.5px;min-height:42px}
+  .tab .full{display:none}.tab .short{display:inline}
+  .tabfade{display:block;position:absolute;top:0;bottom:0;width:36px;pointer-events:none;opacity:0;transition:opacity .2s}
+  .tabfade.l{left:0;background:linear-gradient(90deg,#fff 30%,rgba(255,255,255,0))}
+  .tabfade.r{right:0;background:linear-gradient(270deg,#fff 30%,rgba(255,255,255,0))}
+  .tabfade.r::after{content:"›";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:22px;line-height:1;color:var(--ink);font-weight:700}
+  .tabfade.l::after{content:"‹";position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:22px;line-height:1;color:var(--ink);font-weight:700}
+  .tabwrap.can-l .tabfade.l,.tabwrap.can-r .tabfade.r{opacity:1}
+}
 
 /* ---------- order ---------- */
 .order{background:var(--ink);color:#fff}
@@ -371,7 +388,7 @@ section{padding:84px 0}
   .essence .grid{gap:26px;margin-top:30px}
   .pillar{padding:22px 18px 18px}
   .pillar h3{font-size:20px}
-  .tabs{overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch;margin:18px -16px 14px;padding:10px 16px;position:sticky;top:58px;z-index:15;background:#fff;box-shadow:0 8px 16px -12px rgba(0,0,0,.25)}
+  .tabs{overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch}
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:none;min-height:44px}
   .cattitle{font-size:28px}
@@ -1285,14 +1302,14 @@ footer a{color:#fff}
     <p class="eyebrow">La carte · 100 % halal</p>
     <h2>Ce qu'on vous prépare.</h2>
     <p class="lede">Touchez un plat pour commander par téléphone.</p>
-    <div class="tabs" role="tablist" aria-label="Catégories">
-      <button class="tab" role="tab" aria-selected="true" data-cat="all" id="tab-all" aria-controls="cards">Toute la carte</button>
+    <div class="tabwrap"><div class="tabs" role="tablist" aria-label="Catégories">
+      <button class="tab" role="tab" aria-selected="true" data-cat="all" id="tab-all" aria-controls="cards"><span class="full">Toute la carte</span><span class="short">Tout</span></button>
       <button class="tab" role="tab" aria-selected="false" data-cat="pizza" id="tab-pizza" aria-controls="cards">Pizzas</button>
-      <button class="tab" role="tab" aria-selected="false" data-cat="panuozzo" id="tab-panuozzo" aria-controls="cards">Panuozzi &amp; piadine</button>
+      <button class="tab" role="tab" aria-selected="false" data-cat="panuozzo" id="tab-panuozzo" aria-controls="cards"><span class="full">Panuozzi &amp; piadine</span><span class="short">Panuozzi</span></button>
       <button class="tab" role="tab" aria-selected="false" data-cat="scaccata" id="tab-scaccata" aria-controls="cards">Scaccate</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="dessert" id="tab-dessert" aria-controls="cards">Desserts</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="boisson" id="tab-boisson" aria-controls="cards">Boissons</button>
-    </div>
+    </div><span class="tabfade l" aria-hidden="true"></span><span class="tabfade r" aria-hidden="true"></span></div>
     <div id="cards" role="tabpanel"></div>
     <p class="menu-note">Toutes nos viandes sont halal. Prix à emporter. Allergènes et composition détaillée sur demande au comptoir. Carte susceptible d'évoluer.</p>
   </div>
@@ -1626,9 +1643,14 @@ window.openStatus=function(){
   cards.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ const el=e.target.closest("[data-dish]"); if(el){ e.preventDefault(); openDish(el); } } });
   modal.addEventListener("click",e=>{ if(e.target.closest("[data-close]")) closeDish(); });
   document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&!modal.hidden) closeDish(); });
+  const tabsEl=document.querySelector(".tabs"), tabWrap=document.querySelector(".tabwrap");
+  function tabFades(){ if(!tabsEl) return; const max=tabsEl.scrollWidth-tabsEl.clientWidth; tabWrap.classList.toggle("can-l",tabsEl.scrollLeft>4); tabWrap.classList.toggle("can-r",tabsEl.scrollLeft<max-4); }
+  tabsEl.addEventListener("scroll",tabFades,{passive:true}); window.addEventListener("resize",tabFades); tabFades();
   document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
     document.querySelectorAll(".tab").forEach(x=>x.setAttribute("aria-selected",x===b));
     render(b.dataset.cat);
+    b.scrollIntoView({behavior:"smooth",inline:"center",block:"nearest"});
+    const carte=document.getElementById("carte"); const y=carte.getBoundingClientRect().top+window.scrollY; const tabsY=tabWrap.getBoundingClientRect().top+window.scrollY-58; if(window.scrollY>tabsY) window.scrollTo({top:tabsY,behavior:"smooth"});
   }));
 })();
 </script>
