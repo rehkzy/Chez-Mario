@@ -146,7 +146,8 @@ section{padding:84px 0}
 /* bandeau catégorie pleine largeur */
 .cathero.wide{grid-template-columns:1fr!important;gap:16px!important}
 .cathero.wide img{aspect-ratio:16/9!important;object-position:center 30%;border-radius:18px!important}
-@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide h3{font-size:24px}}
+.cathero.wide img[src*="panuozzo"]{object-position:center 45%}
+@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide img[src*="panuozzo"]{aspect-ratio:1!important;object-position:center 50%}.cathero.wide h3{font-size:24px}}
 
 /* ---------- menu ---------- */
 .menu{background:#fff}
@@ -1484,7 +1485,7 @@ window.CONFIG = {
     },
     panuozzo: {
       sizeNote: "Panuozzo ou piadina, au choix",
-      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud (on l'écrit aussi panozzo, panuzzo, panizza ou panizzo). Quatre recettes, ou le vôtre à composer. Chaque recette existe aussi en piadina."},
+      hero: {img:"photos/panuozzo.jpg", wide:true, title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud (on l'écrit aussi panozzo, panuzzo, panizza ou panizzo). Quatre recettes, ou le vôtre à composer. Chaque recette existe aussi en piadina."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
           {name:"Carnivoro",  price:"12,50 €", desc:"Poulet affiné, bœuf séché, pesto, stracciatella, parmesan, oignons caramélisés, poivrons confits, roquette.", style:"panuozzo", tags:[]},
@@ -1592,7 +1593,7 @@ window.openStatus=function(){
     if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>2 personnes · bases tomate et crème</span></div></div>`; }
     if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}${c.hero.wide?" wide":""}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-img="${m.img||""}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-img="${m.img||(c.hero&&c.hero.img)||""}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
