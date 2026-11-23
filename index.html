@@ -168,7 +168,7 @@ section{padding:84px 0}
 
 /* sous-sections de carte */
 .subhead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin:30px 0 16px;border-bottom:2px solid var(--ink);padding-bottom:8px}
-.subhead h3{font-size:24px;font-weight:700}
+.subhead h3{font-size:24px;font-weight:700;white-space:nowrap}
 .subhead span{font-weight:700;font-size:14px;color:var(--tomato);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
 .compose{margin-top:26px;background:var(--ink);color:#fff;border-radius:18px;padding:26px 28px;display:grid;grid-template-columns:1fr;gap:18px 28px;align-items:start}
@@ -178,7 +178,9 @@ section{padding:84px 0}
 @media (max-width:820px){.compose.with-img{grid-template-columns:1fr}.compose.with-img>img{min-height:0;aspect-ratio:1}}
 .cathero{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin-top:30px}
 .cathero img{width:100%;border-radius:18px;aspect-ratio:1;object-fit:cover}
-.cathero.noimg{grid-template-columns:1fr;background:var(--paper);border:1px solid var(--kraft);border-radius:18px;padding:22px 24px}
+.cathero.noimg{grid-template-columns:1fr;background:transparent;border:0;padding:0;margin-top:14px}
+.cathero.noimg h3{display:none}
+.cathero.noimg p{font-size:16px}
 .cathero h3{font-size:34px;font-weight:900;margin-bottom:12px}
 .cathero p{color:var(--muted);margin:0;font-size:17px}
 @media (max-width:820px){.cathero{grid-template-columns:1fr}}
@@ -228,7 +230,8 @@ section{padding:84px 0}
   .boxes{padding-bottom:40px}
   .boxes-track{display:flex;width:auto;margin:22px 0 0;padding:0 16px;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
   .boxes-track::-webkit-scrollbar{display:none}
-  .boxes figure{flex:0 0 78%;scroll-snap-align:start}
+  .boxes figure{flex:0 0 64%;scroll-snap-align:start}
+  .boxes img{aspect-ratio:1}
 }
 
 .recipes.after-cards{margin-top:22px}
@@ -359,14 +362,16 @@ section{padding:84px 0}
   .essence .grid{gap:26px;margin-top:30px}
   .pillar{padding:22px 18px 18px}
   .pillar h3{font-size:20px}
-  .tabs{overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch;margin:22px -16px 18px;padding:0 16px 6px}
+  .tabs{overflow-x:auto;flex-wrap:nowrap;white-space:nowrap;-webkit-overflow-scrolling:touch;margin:18px -16px 14px;padding:10px 16px;position:sticky;top:58px;z-index:15;background:#fff;box-shadow:0 8px 16px -12px rgba(0,0,0,.25)}
   .tabs::-webkit-scrollbar{display:none}
   .tab{flex:none;min-height:44px}
   .cattitle{font-size:28px}
-  .catblock+.catblock{margin-top:40px;padding-top:20px}
+  .catblock+.catblock{margin-top:34px;padding-top:16px}
+  .cattitle{font-size:26px}
   .subhead{margin:22px 0 10px}
+  .subhead{display:grid;gap:2px}
   .subhead h3{font-size:19px}
-  .subhead span{font-size:11px}
+  .subhead span{font-size:11px;white-space:normal}
   /* carte compacte : vignette + texte sur une ligne */
   .cards{display:grid;grid-template-columns:1fr;gap:10px}
   .card{flex-direction:row;align-items:stretch;border-radius:14px}
@@ -389,7 +394,11 @@ section{padding:84px 0}
   .compose .price{font-size:26px}
   .compose.with-img>.inner{padding:20px 18px}
   .cathero{gap:16px;margin-top:18px}
-  .cathero img{aspect-ratio:1}
+  .cathero{grid-template-columns:96px 1fr;gap:14px;align-items:start}
+  .cathero img{aspect-ratio:1;border-radius:12px}
+  .cathero h3{font-size:20px;margin-bottom:4px}
+  .cathero p{font-size:14.5px}
+  .cathero.noimg{grid-template-columns:1fr}
   .cathero h3{font-size:26px}
   .list{gap:22px}
   .list td{padding:9px 0}
@@ -416,7 +425,7 @@ section{padding:84px 0}
 .sz.duo i{color:var(--ochre)}
 .sz.duo strong{color:var(--ochre)}
 .sz.duo span{color:#c9c2b4}
-@media (max-width:720px){.sizebox{grid-template-columns:1fr;gap:8px;margin-top:16px}.sz{padding:12px 14px}.sz strong{font-size:20px}}
+@media (max-width:720px){.sizebox{grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}.sz{padding:10px 12px;gap:0}.sz strong{font-size:18px}.sz span{font-size:12px}}
 .dish-size{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px}
 .dish-size[hidden]{display:none}
 .dish-size button{font:inherit;border:2px solid var(--kraft);background:#fff;border-radius:14px;padding:10px 12px;cursor:pointer;display:grid;gap:2px;font-weight:800;color:var(--ink);text-align:left}
@@ -425,11 +434,24 @@ section{padding:84px 0}
 .dish-size button.on small{color:#c9c2b4}
 .dish-sheet h3 em{display:block;font-family:var(--font-body);font-style:normal;font-weight:700;font-size:13px;color:var(--ochre);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
 
+/* compose repliable */
+details.compose{padding:0;display:block}
+details.compose summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:center;padding:20px 24px}
+details.compose summary::-webkit-details-marker{display:none}
+details.compose .c-title{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:24px;color:var(--ochre)}
+details.compose .c-price{font-family:var(--font-display);font-weight:900;font-size:24px;color:#fff;font-variant-numeric:tabular-nums}
+details.compose .c-hint{grid-column:1/-1;font-size:13px;font-weight:700;color:#c9c2b4;letter-spacing:.06em;text-transform:uppercase}
+details.compose .c-hint::after{content:" +"}
+details.compose[open] .c-hint::after{content:" –"}
+details.compose .c-body{padding:0 24px 24px;display:grid;gap:16px}
+details.compose .c-body .price{font-size:22px}
+@media (max-width:720px){details.compose summary{padding:16px 18px}details.compose .c-title,details.compose .c-price{font-size:20px}details.compose .c-body{padding:0 18px 18px}}
+
 /* ---------- dish modal ---------- */
 .card[data-dish],.recipe[data-dish]{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
 .card[data-dish]:hover,.card[data-dish]:focus-visible{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,20,22,.14)}
 .recipe[data-dish]:hover,.recipe[data-dish]:focus-visible{background:#fff}
-.card .body::after,.recipe::after{content:"Appeler pour commander →";display:block;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--tomato);letter-spacing:.04em}
+.card .price::after,.recipe .price::after{content:"";display:inline-block;width:17px;height:17px;margin-left:8px;vertical-align:-2px;background:var(--tomato);-webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z'/></svg>") center/contain no-repeat;mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z'/></svg>") center/contain no-repeat}
 .dish-modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:16px}
 .dish-modal[hidden]{display:none}
 .dish-backdrop{position:absolute;inset:0;background:rgba(20,20,22,.6);backdrop-filter:blur(3px)}
@@ -1154,7 +1176,7 @@ footer a{color:#fff}
         <span class="kicker">Restaurant italien halal · Ivry-sur-Seine</span>
         <span class="big">Pizzas <em>&amp;</em> panuozzi<br>faits par <span class="name">Mario</span>.</span>
       </h1>
-      <p class="sub">Tout est préparé à la commande par Mario : pâte maison, produits frais, four chaud. Vous appelez, on enfourne, vous passez récupérer, midi et soir.</p>
+      <p class="sub">Pâte maison, produits frais, tout est préparé à la commande. Vous appelez, on enfourne, vous récupérez.</p>
       <div class="actions">
         <a class="btn btn-call" data-link="tel" href="#commander"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg><span>Commander au <b data-field="phone"></b></span></a>
         <a class="btn btn-ghost" href="#carte">Voir la carte</a>
@@ -1201,15 +1223,15 @@ footer a{color:#fff}
     <div class="grid">
       <article class="pillar" data-n="01">
         <h3>Pâte maison, cuite à la demande</h3>
-        <p>Pétrie sur place tous les jours. Rien n'attend sous une lampe : votre pizza part au four quand vous commandez, et sort avec une croûte gonflée et tachetée.</p>
+        <p>Pétrie sur place chaque jour. Votre pizza part au four quand vous commandez, jamais avant.</p>
       </article>
       <article class="pillar" data-n="02">
         <h3>Des produits qu'on assume</h3>
-        <p>Stracciatella, bresaola, pastrami, pesto, roquette, oignons caramélisés, poivrons confits. Des garnitures généreuses et 100 % halal, visibles, pas cachées sous le fromage.</p>
+        <p>Stracciatella, bresaola, pastrami, burrata, pesto. Généreux, visible, et 100 % halal.</p>
       </article>
       <article class="pillar" data-n="03">
         <h3>Le panuozzo, notre signature</h3>
-        <p>Un pain de pâte à pizza cuit au four, ouvert et garni à chaud. Né près de Naples, encore rare en France. Quatre recettes, ou le vôtre en cinq étapes.</p>
+        <p>Un pain de pâte à pizza cuit au four, ouvert et garni à chaud. Né près de Naples, rare en France.</p>
       </article>
     </div>
   </div>
@@ -1221,7 +1243,7 @@ footer a{color:#fff}
   <div class="wrap">
     <p class="eyebrow">La carte · 100 % halal</p>
     <h2>Ce qu'on vous prépare.</h2>
-    <p class="lede">Pizzas classiques en taille Senior (Duo pour deux : +2 €), pizzas du chef, panuozzi, piadine et scaccate servis chauds. Et pour finir, une Pan'Utella ou un tiramisu.</p>
+    <p class="lede">Touchez un plat pour commander par téléphone.</p>
     <div class="tabs" role="tablist" aria-label="Catégories">
       <button class="tab" role="tab" aria-selected="true" data-cat="all" id="tab-all" aria-controls="cards">Toute la carte</button>
       <button class="tab" role="tab" aria-selected="false" data-cat="pizza" id="tab-pizza" aria-controls="cards">Pizzas</button>
@@ -1254,8 +1276,8 @@ footer a{color:#fff}
   <div class="wrap">
     <div>
       <p class="eyebrow">Commander</p>
-      <h2>Vous appelez, on enfourne, vous récupérez… ou on vous livre.</h2>
-      <p class="lede">Pas de salle, pas d'application : vous passez commande par téléphone, Mario la prépare, et vous venez la chercher au comptoir. À partir de 20 € de commande, on peut aussi vous livrer. Ouvert <span data-hours-sentence></span>.</p>
+      <h2>Vous appelez, on enfourne, vous récupérez.</h2>
+      <p class="lede">Pas de salle, pas d'application : vous commandez par téléphone, Mario prépare, vous venez chercher. Livraison possible dès 20 €.</p>
       <ol class="steps">
         <li><i>1</i><div><strong>Appelez</strong><span>Dites-nous ce que vous voulez et l'heure à laquelle vous passez.</span></div></li>
         <li><i>2</i><div><strong>On prépare</strong><span>Tout part au four au moment convenu, pour que ce soit chaud.</span></div></li>
@@ -1420,7 +1442,7 @@ window.CONFIG = {
     },
     panuozzo: {
       sizeNote: "Panuozzo ou piadina, au choix",
-      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud. On l'écrit panuozzo, mais on nous le demande aussi en panozzo, panuzzo, panizza ou panizzo : c'est le même, et c'est ici qu'on le trouve à Ivry. Quatre recettes, ou le vôtre à composer. Chaque recette existe aussi en piadina."},
+      hero: {img:"photos/panuozzo.jpg", title:"Le panuozzo", text:"Un pain de pâte à pizza passé au four, ouvert et garni à chaud (on l'écrit aussi panozzo, panuzzo, panizza ou panizzo). Quatre recettes, ou le vôtre à composer. Chaque recette existe aussi en piadina."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
           {name:"Carnivoro",  price:"12,50 €", desc:"Poulet affiné, bœuf séché, pesto, stracciatella, parmesan, oignons caramélisés, poivrons confits, roquette.", style:"panuozzo", tags:[]},
@@ -1438,7 +1460,7 @@ window.CONFIG = {
       ]}
     },
     scaccata: {
-      hero: {img:"", title:"La scaccata", text:"Une baguette farcie, garnie puis passée au four. Deux recettes, ou la vôtre à composer."},
+      hero: {img:"", title:"La scaccata", text:"Une baguette farcie, garnie puis passée au four."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
           {name:"Pollo", price:"9,90 €", desc:"Crème fraîche, mozzarella, poulet, pommes de terre, olives, champignons.", style:"scaccata", tags:[]},
@@ -1453,7 +1475,7 @@ window.CONFIG = {
       ]}
     },
     dessert: {
-      hero: {img:"photos/tiramisu.jpg", title:"Les desserts", text:"Le tiramisu, et la Pan'Utella : une pâte à pizza garnie de Nutella ou de crème de pistache, avec amandes grillées ou noix, au choix."},
+      hero: {img:"photos/tiramisu.jpg", title:"Les desserts", text:"Le tiramisu, et la Pan'Utella : pâte à pizza garnie de Nutella ou de pistache."},
       lists: [
         {title:"Nos douceurs", items:[["Pan'Utella","Nutella ou pistache · amandes grillées ou noix, au choix","7 €"],["Tiramisu","","4 €"]]}
       ]
@@ -1515,15 +1537,15 @@ window.openStatus=function(){
   const CAT_TITLES={pizza:"Pizzas",panuozzo:"Panuozzi & piadine",scaccata:"Scaccate · baguettes farcies",dessert:"Desserts",boisson:"Boissons"};
   function renderCat(cat){
     const c=CONFIG.menu[cat]; let h="";
-    if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>Taille standard, pour 1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>Plus grande, pour 2 personnes, sur les bases tomate et crème. Dites « Duo » en commandant.</span></div></div>`; }
-    if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
+    if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>2 personnes · bases tomate et crème</span></div></div>`; }
+    if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
       c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
         if(noImg.length) h+=`<div class="recipes${withImg.length?" after-cards":""}">${noImg.map(recipe).join("")}</div>`; } });
-      if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=k.img?`<div class="compose with-img"><div class="inner">${inner}</div><img src="${k.img}" alt="Pizza à composer — Chez Mario" loading="lazy" decoding="async"></div>`:`<div class="compose">${inner}</div>`; }
+      if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=`<details class="compose"><summary><span class="c-title">${k.title}</span><span class="c-price">${k.price}</span><span class="c-hint">Voir les étapes</span></summary><div class="c-body"><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div></div></details>`; }
     }
     if(c.lists){
       h+=`<div class="list">${c.lists.map(l=>`<div class="col"><h3>${l.title}${l.note?`<small>${l.note}</small>`:""}</h3><table>${l.items.map(it=>`<tr><td>${it[0]}${it[1]?`<small>${it[1]}</small>`:""}</td><td>${it[2]}</td></tr>`).join("")}</table></div>`).join("")}</div>`;
