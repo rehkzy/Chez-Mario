@@ -143,6 +143,11 @@ section{padding:84px 0}
 .dough-text p{margin:0;color:#c9c2b4;font-size:16px}
 @media (max-width:820px){.dough{grid-template-columns:1fr 1fr;margin-top:26px;gap:10px}.dough-text{grid-column:1/-1;order:-1;padding:22px 20px}}
 
+/* bandeau catégorie pleine largeur */
+.cathero.wide{grid-template-columns:1fr!important;gap:16px!important}
+.cathero.wide img{aspect-ratio:16/9!important;object-position:center 30%;border-radius:18px!important}
+@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide h3{font-size:24px}}
+
 /* ---------- menu ---------- */
 .menu{background:#fff}
 .tabs{display:flex;gap:8px;margin:34px 0 28px;flex-wrap:wrap}
@@ -1512,7 +1517,7 @@ window.CONFIG = {
       ]
     },
     boisson: {
-      hero: {img:"photos/boissons-v2.jpg", title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
+      hero: {img:"photos/boissons-v2.jpg", wide:true, title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
       groups: [
         {title:"", layout:"list", items:[
           {img:"photos/polara-arancia.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
@@ -1576,7 +1581,7 @@ window.openStatus=function(){
   function renderCat(cat){
     const c=CONFIG.menu[cat]; let h="";
     if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>2 personnes · bases tomate et crème</span></div></div>`; }
-    if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
+    if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}${c.hero.wide?" wide":""}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
       c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
