@@ -205,7 +205,7 @@ section{padding:84px 0}
 .recipe{padding:18px 0;border-bottom:1px solid var(--kraft);display:grid;gap:8px}
 .recipe.has-img{grid-template-columns:96px 1fr;column-gap:16px}
 .recipe.has-img .thumb{grid-row:1/span 4;width:96px;height:96px;object-fit:cover;border-radius:12px}
-.recipe.has-img .thumb[src*="polara"]{height:120px;object-fit:contain;background:var(--ink);border-radius:12px}
+
 .recipe .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .recipe h3{font-size:24px;font-weight:700}
 .recipe .price{font-family:var(--font-display);font-weight:900;font-size:22px;color:var(--tomato);font-variant-numeric:tabular-nums}
@@ -441,10 +441,21 @@ details.compose summary{list-style:none;cursor:pointer;display:grid;grid-templat
 details.compose summary::-webkit-details-marker{display:none}
 details.compose .c-title{font-family:var(--font-display);font-style:italic;font-weight:900;font-size:24px;color:var(--ochre)}
 details.compose .c-price{font-family:var(--font-display);font-weight:900;font-size:24px;color:#fff;font-variant-numeric:tabular-nums}
-details.compose .c-hint{grid-column:1/-1;font-size:13px;font-weight:700;color:#c9c2b4;letter-spacing:.06em;text-transform:uppercase}
+details.compose .c-hint{grid-column:1/-1;font-size:13px;font-weight:700;color:var(--ochre);letter-spacing:.06em;text-transform:uppercase}
 details.compose .c-hint::after{content:" +"}
 details.compose[open] .c-hint::after{content:" –"}
-details.compose .c-body{padding:0 24px 24px;display:grid;gap:16px}
+details.compose .c-body{padding:0 24px 24px;display:grid;gap:18px}
+details.compose .c-title small{display:block;font-family:var(--font-body);font-style:normal;font-weight:600;font-size:13px;color:#c9c2b4;letter-spacing:.04em}
+.c-intro{margin:0;color:#c9c2b4;font-size:15px;line-height:1.5;padding:12px 14px;border:1px dashed #4a4a50;border-radius:12px}
+.c-intro strong{color:#fff}
+.c-intro .x,.chip.extra b{background:var(--ochre);color:var(--ink);font-weight:800;font-size:11px;padding:2px 6px;border-radius:999px;margin-left:6px;font-style:normal}
+details.compose li strong{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+details.compose li strong em{font-style:normal;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);background:rgba(224,165,58,.14);padding:3px 8px;border-radius:999px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;background:#2a2a2e;color:#fff;border:1px solid #3a3a40;border-radius:999px;padding:6px 11px;font-size:13.5px;font-weight:600;line-height:1}
+.chip.extra{border-color:var(--ochre)}
+.c-call{display:flex;justify-content:center;align-items:center;min-height:50px;background:var(--tomato);color:#fff;text-decoration:none;font-weight:800;border-radius:999px;font-size:16px}
+details.compose .c-body .price{display:none}
 details.compose .c-body .price{font-size:22px}
 @media (max-width:720px){details.compose summary{padding:16px 18px}details.compose .c-title,details.compose .c-price{font-size:20px}details.compose .c-body{padding:0 18px 18px}}
 
@@ -993,7 +1004,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-arancia.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-arancia-thumb.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1004,7 +1015,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-limonata.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-limonata-thumb.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1015,7 +1026,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-mandarino.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-mandarino-thumb.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1026,7 +1037,7 @@ footer a{color:#fff}
         "price": "2.90",
         "priceCurrency": "EUR"
        },
-       "image": "https://chezmario.vercel.app/photos/polara-the-pesca.jpg"
+       "image": "https://chezmario.vercel.app/photos/polara-the-pesca-thumb.jpg"
       },
       {
        "@type": "MenuItem",
@@ -1467,12 +1478,12 @@ window.CONFIG = {
           {name:"Mortadello", price:"13,50 €", desc:"Sauce 5 fromages, roquette, tomates séchées, burrata, graines de pistache, mortadelle.", style:"panuozzo", tags:["Signature"]}
         ]}
       ],
-      compose: {title:"Compose ton panuozzo", price:"12,50 €", note:"sauce truffe +1 € · extra amandes grillées, noix ou pistache +1 €", steps:[
-        ["Choisis ta base","Sauce tomate, crème fraîche, sauce du chef, sauce fromage, pesto, ou sauce truffe (+1 €)"],
-        ["Choisis ton fromage","Stracciatella, comté, parmesan, gorgonzola ou raclette"],
-        ["Jusqu'à 4 garnitures","Roquette, oignons caramélisés, tomates confites, tomates séchées, poivrons confits, cornichons, artichauts, chou rouge"],
-        ["1 ou 2 viandes","Jambon de veau, poulet affiné, pastrami, bresaola, salami pepperoni, mortadelle, bœuf séché"],
-        ["Touche de balsamique","Au choix, pour finir"]
+      compose: {title:"Compose ton panuozzo", sub:"ou ta piadina", price:"12,50 €", steps:[
+        {title:"La base", pick:"1 au choix", items:["Sauce tomate","Crème fraîche","Sauce du chef","Sauce fromage","Pesto",{n:"Sauce truffe",extra:"+1 €"}]},
+        {title:"Le fromage", pick:"1 au choix", items:["Stracciatella","Comté","Parmesan","Gorgonzola","Raclette"]},
+        {title:"Les garnitures", pick:"jusqu'à 4", items:["Roquette","Oignons caramélisés","Tomates confites","Tomates séchées","Poivrons confits","Cornichons","Artichauts","Chou rouge"]},
+        {title:"La viande", pick:"1 ou 2", items:["Jambon de veau","Poulet affiné","Pastrami","Bresaola","Salami pepperoni","Mortadelle","Bœuf séché"]},
+        {title:"La touche finale", pick:"si vous voulez", items:["Crème de balsamique",{n:"Amandes grillées",extra:"+1 €"},{n:"Noix",extra:"+1 €"},{n:"Pistache",extra:"+1 €"}]}
       ]}
     },
     scaccata: {
@@ -1483,11 +1494,12 @@ window.CONFIG = {
           {name:"Beef",  price:"9,90 €", desc:"Sauce tomate, viande hachée, mozzarella, oignons, poivrons.", style:"scaccata", tags:[]}
         ]}
       ],
-      compose: {title:"Compose ta scaccata", price:"11,90 €", note:"sauce truffe +1 € · extra amandes grillées, noix ou pistache +1 €", steps:[
-        ["Choisis ta base","Sauce tomate, crème fraîche, sauce du chef, sauce fromage, pesto, ou sauce truffe (+1 €)"],
-        ["Choisis ton fromage","Stracciatella, comté, parmesan, gorgonzola ou raclette"],
-        ["Jusqu'à 4 garnitures","Roquette, oignons caramélisés, tomates confites, tomates séchées, poivrons confits, cornichons, artichauts"],
-        ["1 ou 2 viandes","Viande hachée, poulet, jambon de veau, poulet affiné, pastrami, bresaola, salami pepperoni, mortadelle, bœuf séché"]
+      compose: {title:"Compose ta scaccata", sub:"baguette farcie", price:"11,90 €", steps:[
+        {title:"La base", pick:"1 au choix", items:["Sauce tomate","Crème fraîche","Sauce du chef","Sauce fromage","Pesto",{n:"Sauce truffe",extra:"+1 €"}]},
+        {title:"Le fromage", pick:"1 au choix", items:["Stracciatella","Comté","Parmesan","Gorgonzola","Raclette"]},
+        {title:"Les garnitures", pick:"jusqu'à 4", items:["Roquette","Oignons caramélisés","Tomates confites","Tomates séchées","Poivrons confits","Cornichons","Artichauts"]},
+        {title:"La viande", pick:"1 ou 2", items:["Viande hachée","Poulet","Jambon de veau","Poulet affiné","Pastrami","Bresaola","Salami pepperoni","Mortadelle","Bœuf séché"]},
+        {title:"La touche finale", pick:"si vous voulez", items:[{n:"Amandes grillées",extra:"+1 €"},{n:"Noix",extra:"+1 €"},{n:"Pistache",extra:"+1 €"}]}
       ]}
     },
     dessert: {
@@ -1502,10 +1514,10 @@ window.CONFIG = {
       hero: {img:"photos/boissons-v2.jpg", title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
       groups: [
         {title:"Sodas siciliens Polara", note:"2,90 €", layout:"list", items:[
-          {img:"photos/polara-arancia.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-limonata.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-mandarino.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
-          {img:"photos/polara-the-pesca.jpg", name:"Thè Pesca", price:"2,90 €", desc:"Thé noir infusé à la pêche.", style:"boisson", tags:[]}
+          {img:"photos/polara-arancia-thumb.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-limonata-thumb.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-mandarino-thumb.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
+          {img:"photos/polara-the-pesca-thumb.jpg", name:"Thè Pesca", price:"2,90 €", desc:"Thé noir infusé à la pêche.", style:"boisson", tags:[]}
         ]}
       ],
       lists: [
@@ -1570,7 +1582,8 @@ window.openStatus=function(){
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
         if(noImg.length) h+=`<div class="recipes${withImg.length?" after-cards":""}">${noImg.map(recipe).join("")}</div>`; } });
-      if(c.compose){ const k=c.compose; const inner=`<h3>${k.title}</h3><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div>`; h+=`<details class="compose"><summary><span class="c-title">${k.title}</span><span class="c-price">${k.price}</span><span class="c-hint">Voir les étapes</span></summary><div class="c-body"><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st[0]}</strong><span>${st[1]}</span></div></li>`).join("")}</ol><div class="price">${k.price}<small>${k.note}</small></div></div></details>`; }
+      if(c.compose){ const k=c.compose; const chip=it=>typeof it==="string"?`<span class="chip">${it}</span>`:`<span class="chip extra">${it.n}<b>${it.extra}</b></span>`;
+        h+=`<details class="compose"><summary><span class="c-title">${k.title}<small>${k.sub||""}</small></span><span class="c-price">${k.price}</span><span class="c-hint">Comment ça marche</span></summary><div class="c-body"><p class="c-intro">Vous choisissez, Mario assemble et enfourne. Prix fixe <strong>${k.price}</strong>, seuls les ingrédients marqués <b class="x">+1 €</b> sont en supplément.</p><ol>${k.steps.map((st,i)=>`<li><i>${i+1}</i><div><strong>${st.title}<em>${st.pick}</em></strong><div class="chips">${st.items.map(chip).join("")}</div></div></li>`).join("")}</ol><a class="c-call" data-link="tel" href="tel:${CONFIG.phone.replace(/\s/g,"")}">Appeler pour composer · ${k.price}</a></div></details>`; }
     }
     if(c.lists){
       h+=`<div class="list">${c.lists.map(l=>`<div class="col"><h3>${l.title}${l.note?`<small>${l.note}</small>`:""}</h3><table>${l.items.map(it=>`<tr><td>${it[0]}${it[1]?`<small>${it[1]}</small>`:""}</td><td>${it[2]}</td></tr>`).join("")}</table></div>`).join("")}</div>`;
