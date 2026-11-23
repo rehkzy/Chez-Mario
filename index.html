@@ -205,6 +205,8 @@ section{padding:84px 0}
 .recipe{padding:18px 0;border-bottom:1px solid var(--kraft);display:grid;gap:8px}
 .recipe.has-img{grid-template-columns:96px 1fr;column-gap:16px}
 .recipe.has-img .thumb{grid-row:1/span 4;width:96px;height:96px;object-fit:cover;border-radius:12px}
+.recipe.has-img .thumb[src*="polara"]{width:52px;height:140px;object-fit:cover;border-radius:10px}
+.recipe.has-img:has(.thumb[src*="polara"]){grid-template-columns:52px 1fr}
 
 .recipe .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .recipe h3{font-size:24px;font-weight:700}
