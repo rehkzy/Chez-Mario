@@ -205,6 +205,7 @@ section{padding:84px 0}
 .recipe{padding:18px 0;border-bottom:1px solid var(--kraft);display:grid;gap:8px}
 .recipe.has-img{grid-template-columns:96px 1fr;column-gap:16px}
 .recipe.has-img .thumb{grid-row:1/span 4;width:96px;height:96px;object-fit:cover;border-radius:12px}
+.recipe.has-img .thumb[src*="polara"]{height:120px;object-fit:contain;background:var(--ink);border-radius:12px}
 .recipe .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .recipe h3{font-size:24px;font-weight:700}
 .recipe .price{font-family:var(--font-display);font-weight:900;font-size:22px;color:var(--tomato);font-variant-numeric:tabular-nums}
@@ -1498,8 +1499,9 @@ window.CONFIG = {
       ]
     },
     boisson: {
+      hero: {img:"photos/boissons-v2.jpg", title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
       groups: [
-        {title:"Sodas siciliens Polara", note:"Vrai jus de fruits de Sicile · 27,5 cl", items:[
+        {title:"Sodas siciliens Polara", note:"2,90 €", layout:"list", items:[
           {img:"photos/polara-arancia.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
           {img:"photos/polara-limonata.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
           {img:"photos/polara-mandarino.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
