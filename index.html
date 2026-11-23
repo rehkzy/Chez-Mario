@@ -147,7 +147,8 @@ section{padding:84px 0}
 .cathero.wide{grid-template-columns:1fr!important;gap:16px!important}
 .cathero.wide img{aspect-ratio:16/9!important;object-position:center 30%;border-radius:18px!important}
 .cathero.wide img[src*="panuozzo"]{object-position:center 45%}
-@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide img[src*="panuozzo"]{aspect-ratio:1!important;object-position:center 50%}.cathero.wide h3{font-size:24px}}
+.cathero.wide img[src*="scaccata"]{object-position:center 55%}
+@media (max-width:720px){.cathero.wide img{aspect-ratio:4/3!important;object-position:center 28%;border-radius:14px!important}.cathero.wide img[src*="panuozzo"],.cathero.wide img[src*="scaccata"]{aspect-ratio:1!important;object-position:center 50%}.cathero.wide h3{font-size:24px}}
 
 /* ---------- menu ---------- */
 .menu{background:#fff}
@@ -1503,7 +1504,7 @@ window.CONFIG = {
       ]}
     },
     scaccata: {
-      hero: {img:"", title:"La scaccata", text:"Une baguette farcie, garnie puis passée au four."},
+      hero: {img:"photos/scaccata.jpg", wide:true, title:"La scaccata", text:"Une baguette farcie, garnie puis passée au four. Deux recettes, ou la vôtre à composer."},
       groups: [
         {title:"Nos recettes", layout:"list", items:[
           {name:"Pollo", price:"9,90 €", desc:"Crème fraîche, mozzarella, poulet, pommes de terre, olives, champignons.", style:"scaccata", tags:[]},
