@@ -475,7 +475,10 @@ details.compose .c-body .price{font-size:22px}
 .dish-backdrop{position:absolute;inset:0;background:rgba(20,20,22,.6);backdrop-filter:blur(3px)}
 .dish-sheet{position:relative;overflow:hidden;background:var(--paper);color:var(--text);border-radius:22px;padding:32px 26px 24px;width:min(440px,100%);box-shadow:0 30px 70px rgba(0,0,0,.4);animation:sheet .18s ease-out}
 .dish-sheet::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--basil) 0 34%,#dedede 34% 66%,var(--tomato) 66%)}
-.dish-close{position:absolute;top:10px;right:12px;background:transparent;border:0;font-size:30px;line-height:1;cursor:pointer;color:var(--muted);width:40px;height:40px}
+.dish-close{position:absolute;top:10px;right:12px;background:rgba(242,233,214,.92);border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--ink);width:40px;height:40px;border-radius:50%;z-index:2}
+.dish-img{display:block;width:calc(100% + 52px);margin:-26px -26px 18px;aspect-ratio:1;object-fit:cover}
+.dish-img[hidden]{display:none}
+@media (max-width:720px){.dish-img{aspect-ratio:4/3;object-position:center 45%}}
 .dish-sheet h3{font-size:28px;font-weight:900;margin:4px 0 10px}
 .dish-sheet h3 span{color:var(--tomato);margin-left:10px;font-variant-numeric:tabular-nums}
 .dish-how{margin:0 0 18px;color:var(--muted);font-size:15.5px}
@@ -1378,6 +1381,7 @@ footer a{color:#fff}
   <div class="dish-backdrop" data-close></div>
   <div class="dish-sheet" role="dialog" aria-modal="true" aria-labelledby="dish-title">
     <button class="dish-close" type="button" data-close aria-label="Fermer">×</button>
+    <img class="dish-img" id="dish-img" alt="" hidden>
     <p class="eyebrow">Commander</p>
     <h3 id="dish-title"></h3>
     <p class="dish-how">Appelez-nous, Mario la prépare, et vous passez la récupérer au comptoir, 7 rue Gabriel Péri à Ivry. Livraison possible dès 20 € de commande.</p>
@@ -1569,7 +1573,7 @@ window.openStatus=function(){
   // carte
   const cards=document.getElementById("cards");
   const card=m=>`
-      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
+      <article class="card${m.img?"":" nophoto"}" data-dish="${m.name}" data-price="${m.price}" data-img="${m.img||""}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">
         ${m.img?`<div class="photo"><img src="${m.img}" alt="${m.name} — pizza Chez Mario, Ivry-sur-Seine" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></div>`:``}
         <div class="body">
           <div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div>
@@ -1583,7 +1587,7 @@ window.openStatus=function(){
     if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>2 personnes · bases tomate et crème</span></div></div>`; }
     if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}${c.hero.wide?" wide":""}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-img="${m.img||""}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
@@ -1609,7 +1613,7 @@ window.openStatus=function(){
   const euro=n=>n.toFixed(2).replace(".",",").replace(",00","")+" €";
   function setSize(sz){ sizeBox.querySelectorAll("button").forEach(b=>b.classList.toggle("on",b.dataset.size===sz)); const base=parseFloat(cur.dataset.price.replace("€","").replace(",",".")); mTitle.innerHTML=cur.dataset.dish+"<span>"+euro(sz==="duo"?base+2:base)+"</span>"+(sz==="duo"?"<em>Duo · 2 pers.</em>":""); }
   sizeBox.addEventListener("click",e=>{ const b=e.target.closest("button[data-size]"); if(b) setSize(b.dataset.size); });
-  function openDish(el){ cur=el; const isPizza=!!el.closest("#carte-pizza")||document.querySelector(".tab[aria-selected=true]")?.dataset.cat==="pizza"&&el.classList.contains("card"); sizeBox.hidden=!(el.dataset.pizza==="1"); if(el.dataset.pizza==="1") setSize("senior"); else mTitle.innerHTML=el.dataset.dish+"<span>"+el.dataset.price+"</span>"; const st=openStatus(); mStatus.textContent=st.open?"Ouvert maintenant, on décroche.":"Fermé pour le moment · "+st.next; mStatus.className="dish-status"+(st.open?" open":""); modal.hidden=false; document.body.style.overflow="hidden"; modal.querySelector(".dish-call").focus(); }
+  function openDish(el){ cur=el; const im=document.getElementById("dish-img"); if(el.dataset.img){ im.src=el.dataset.img; im.alt=el.dataset.dish; im.hidden=false; } else { im.hidden=true; im.removeAttribute("src"); } const isPizza=!!el.closest("#carte-pizza")||document.querySelector(".tab[aria-selected=true]")?.dataset.cat==="pizza"&&el.classList.contains("card"); sizeBox.hidden=!(el.dataset.pizza==="1"); if(el.dataset.pizza==="1") setSize("senior"); else mTitle.innerHTML=el.dataset.dish+"<span>"+el.dataset.price+"</span>"; const st=openStatus(); mStatus.textContent=st.open?"Ouvert maintenant, on décroche.":"Fermé pour le moment · "+st.next; mStatus.className="dish-status"+(st.open?" open":""); modal.hidden=false; document.body.style.overflow="hidden"; modal.querySelector(".dish-call").focus(); }
   function closeDish(){ modal.hidden=true; document.body.style.overflow=""; }
   cards.addEventListener("click",e=>{ const el=e.target.closest("[data-dish]"); if(el) openDish(el); });
   cards.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){ const el=e.target.closest("[data-dish]"); if(el){ e.preventDefault(); openDish(el); } } });
