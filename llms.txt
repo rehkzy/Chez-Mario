@@ -7,7 +7,7 @@
 - Type : restaurant italien, pizzeria, halal
 - Adresse : 7 rue Gabriel Péri, 94200 Ivry-sur-Seine, France
 - Téléphone : 09 72 84 74 29
-- Horaires : lundi à samedi 11h – 14h30 et 18h – 23h30, dimanche 18h – 23h30
+- Horaires : lundi à samedi 11h30 – 15h et 18h – 23h30, dimanche 18h – 23h30
 - Commande : par téléphone. Retrait et paiement au comptoir, ou livraison à partir de 20 € de commande. Deliveroo / Uber Eats à venir.
 - Instagram : https://www.instagram.com/chezmario94/
 - Site : https://chezmario.vercel.app/
