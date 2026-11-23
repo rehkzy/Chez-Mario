@@ -958,7 +958,8 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Pan'Utella",
-       "description": "Nutella ou pistache · amandes grillées ou noix, au choix",
+       "description": "Pâte à pizza, Nutella ou crème de pistache, amandes grillées ou noix, au choix.",
+       "image": "https://chezmario.vercel.app/photos/panutella.jpg",
        "offers": {
         "@type": "Offer",
         "price": "7",
@@ -968,6 +969,8 @@ footer a{color:#fff}
       {
        "@type": "MenuItem",
        "name": "Tiramisu",
+       "description": "Mascarpone, spéculoos et caramel.",
+       "image": "https://chezmario.vercel.app/photos/tiramisu.jpg",
        "offers": {
         "@type": "Offer",
         "price": "4",
@@ -1483,9 +1486,11 @@ window.CONFIG = {
       ]}
     },
     dessert: {
-      hero: {img:"photos/tiramisu.jpg", title:"Les desserts", text:"Le tiramisu, et la Pan'Utella : pâte à pizza garnie de Nutella ou de pistache."},
-      lists: [
-        {title:"Nos douceurs", items:[["Pan'Utella","Nutella ou pistache · amandes grillées ou noix, au choix","7 €"],["Tiramisu","","4 €"]]}
+      groups: [
+        {title:"Nos douceurs", items:[
+          {img:"photos/panutella.jpg", name:"Pan'Utella", price:"7 €", desc:"Pâte à pizza, Nutella ou crème de pistache, amandes grillées ou noix, au choix.", style:"dessert", tags:[]},
+          {img:"photos/tiramisu.jpg", name:"Tiramisu", price:"4 €", desc:"Mascarpone, spéculoos et caramel.", style:"dessert", tags:[]}
+        ]}
       ]
     },
     boisson: {
