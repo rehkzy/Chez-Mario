@@ -1514,7 +1514,7 @@ window.CONFIG = {
     boisson: {
       hero: {img:"photos/boissons-v2.jpg", title:"Les sodas siciliens Polara", text:"Recettes siciliennes depuis 1953, avec du vrai jus de fruits de Sicile. Quatre parfums, servis bien frais, en bouteille de 27,5 cl."},
       groups: [
-        {title:"Sodas siciliens Polara", note:"2,90 €", layout:"list", items:[
+        {title:"", layout:"list", items:[
           {img:"photos/polara-arancia.jpg", name:"Arancia Rossa", price:"2,90 €", desc:"22 % de jus d'oranges sanguines de Sicile.", style:"boisson", tags:[]},
           {img:"photos/polara-limonata.jpg", name:"Limonata", price:"2,90 €", desc:"15 % de jus de citrons de Sicile.", style:"boisson", tags:[]},
           {img:"photos/polara-mandarino.jpg", name:"Mandarino Verde", price:"2,90 €", desc:"15 % de jus de mandarines vertes de Sicile.", style:"boisson", tags:[]},
@@ -1578,7 +1578,7 @@ window.openStatus=function(){
     if(cat==="pizza"){ h+=`<div class="sizebox"><div class="sz"><i>Senior</i><strong>Prix affiché</strong><span>1 personne</span></div><div class="sz duo"><i>Duo</i><strong>+ 2 €</strong><span>2 personnes · bases tomate et crème</span></div></div>`; }
     if(c.hero){ h+=`<div class="cathero${c.hero.img?"":" noimg"}">${c.hero.img?`<img src="${c.hero.img}" alt="${c.hero.title} — Chez Mario, Ivry-sur-Seine" decoding="async">`:""}<div><h3>${c.hero.title}</h3><p>${c.hero.text}</p></div></div>`; }
     if(c.groups){
-      c.groups.forEach((g,i)=>{ h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
+      c.groups.forEach((g,i)=>{ if(g.title) h+=`<div class="subhead"><h3>${g.title}</h3>${g.note?`<span>${g.note}</span>`:(i<2&&c.sizeNote?`<span>${c.sizeNote}</span>`:"")}</div>`; const recipe=m=>`<div class="recipe${m.img?" has-img":""}" data-dish="${m.name}" data-price="${m.price}" data-pizza="${m.style==="rossa"||m.style==="bianca"?1:0}" tabindex="0" role="button" aria-label="${m.name}, ${m.price} : appeler pour commander">${m.img?`<img class="thumb" src="${m.img}" alt="${m.name}" loading="lazy" decoding="async">`:""}<div class="top"><h3>${m.name}</h3><span class="price">${m.price}</span></div><p>${m.desc}</p><div class="tags">${m.tags.map(t=>`<span class="${/pic|épic/i.test(t)?'hot':/vég/i.test(t)?'v':''}">${t}</span>`).join("")}</div></div>`;
       if(g.layout==="list"){ h+=`<div class="recipes">${g.items.map(recipe).join("")}</div>`; }
       else { const withImg=g.items.filter(m=>m.img), noImg=g.items.filter(m=>!m.img);
         if(withImg.length) h+=`<div class="cards">${withImg.map(card).join("")}</div>`;
